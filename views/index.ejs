@@ -1,15 +1,44 @@
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
 
-<div class="container">
+  </head>
+  <body>
 
-<% if(typeof currentUser === 'object') { %>
+  </body>
+</html>
+
+<nav>
+  <a href="/"> Home </a>
+  <a href="/about"> About </a>
+  <a href="/squad"> Squad </a>
+  <a href="/film"> Film </a>
+</nav>
+
+<div class="home-cont">
+
+
+<h1>Fixed Latinos</h1>
+<p>Welcome to the Gnarliest Fixed Squad</p>
+
+<img class="logo" src="/images/logo.jpg">
+
+</div>
+
+<!-- <div class="container"> -->
+
+<!-- <% if(typeof currentUser === 'object') { %> -->
             <!-- If we got the logged in user variable  -->
-  <p> Hello, <%= currentUser.username%>! </p>
-<% } else { %>
+  <!-- <p> Hello, <%= currentUser.username%>! </p>
+<% } else { %> -->
+
+
         <!-- If we DIDNT GET the logged in user variable -->
-    <h3> Why dont you log in!? </h3>
+    <!-- <h3> Why dont you log in!? </h3>
     <a href="/login"> <b>Log In NOW! </a></br>
 <% } %>
 
-</div>
+</div> -->

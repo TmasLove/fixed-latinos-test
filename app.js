@@ -10,10 +10,13 @@ const session      = require('express-session');
 const passport    = require('passport');
 
 
-
-mongoose.connect('mongodb://localhost/fixed-latinos-test');
-
 const app = express();
+
+
+// mongoose.connect('mongodb://localhost/fixed-latinos-test');
+
+
+app.listen(3005);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,9 +34,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 app.use(session({
-  // secret: '',
-  // resave: true,
-  // saveUninitialized: true
+  secret: 'kfjbeLSKFABSzkdbs',
+  resave: true,
+  saveUninitialized: true
 
 }));
 //-----------------------------------------------------------------------------
@@ -65,9 +68,18 @@ app.use('/', myAuthRoutes);
 
 
 
+app.get('/film', (request, response, next) => {
+  response.render('film.ejs');
+});
+
+app.get('/about', (request, response, next) => {
+  response.render('about.ejs');
+});
 
 
-
+app.get('/squad', (request, response, next) => {
+  response.render('squad.ejs');
+});
 
 
 
