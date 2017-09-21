@@ -67,7 +67,6 @@ const myAuthRoutes = require('./routes/auth-routes.js');
 app.use('/', myAuthRoutes);
 
 
-
 app.get('/film', (request, response, next) => {
   response.render('film.ejs');
 });
