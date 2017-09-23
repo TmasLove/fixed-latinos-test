@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #333 !important;
   color: white;
@@ -12,20 +11,183 @@ body {
   z-index: 9999;
   width: 100%;
   height: 50px;
+  background-color: black;
 }
 
 .nav > li {
 position: relative;
 left: 200px;
+color: white;
 
+}
+
+
+
+.navbar-default .navbar-nav>li>a {
+  color: #00bfff !important;
+  transition: 0.3s ease;
+  padding: 15px;
+  margin: 0 15px;
+  text-align: center;
+}
+
+.navbar-default .navbar-form {
+  padding-right: 20px !important;
+}
+
+.navbar-nav>li>a:hover {
+  border-left: 3px solid #00bfff;
+  border-right: 3px solid #00bfff;
+  color: white !important;
+}
+
+
+.navbar-brand {
+  color: #00bfff !important;
+  transition: 0.3s ease;
+
+}
+
+.navbar-brand:hover {
+  padding: 20px 10px;
+  background-color: #00bfff !important;
+  color: black !important;
 }
 
 /*index*/
 .jumbotron {
-  margin-top: 30px;
+  width: 100%;
   text-align: center;
-  background-image: image('/images/logo.jpg') !important;
+  background-image: ur('/images/logo.jpg') !important;
+  margin-top: 10px;
 }
+
+
+/*-------------- Video section  --------------*/
+#video-sec {
+  background: url('../images/video-bg.jpg') 50% 0 repeat-y fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+    text-align: center;
+  position: relative;
+    color: #fff;
+
+}
+
+
+#video-sec .overlay {
+  background: rgba(03,03,03,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 10px;
+}
+
+#video-sec h2 {
+  color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+#video-sec small{
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+}
+
+#video-sec .fa {
+  position: relative;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 28px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 22px;
+}
+
+
+
+/*-- services --*/
+.about-header-top{
+	background: rgba(0, 0, 0, 0.7) !important;
+}
+.services{
+    padding: 4em 0;
+    background: #FFFFFF;
+}
+.w3layouts-services-heading{
+	text-align:center;
+}
+.w3layouts-services-heading h2,.w3-agileits-rides-heading h3,.w3-training-heading h3,.agileits-about-top-heading h3,.w3layouts-contact-form-top h3,.contact-form-top h3,.w3agile-map h3,.agileits_three_comments h3,.w3_leave_comment h3{
+	color: #00bfff;
+    font-size: 2em;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.w3-services-grids {
+    margin: 4em 0 0 0;
+}
+.w3l-services-grid{
+	text-align:center;
+}
+.w3ls-services-img i.fa.fa-male,.w3ls-services-img i.fa.fa-bicycle,.w3ls-services-img i.fa.fa-cog,.w3ls-services-img i.fa.fa-female{
+    width: 90px;
+    height: 90px;
+    color: #dadfe2;
+    font-size: 4em;
+    padding: .2em 0 0 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.agileits-services-info h4{
+    color: #000000;
+    font-size: 1.2em;
+    margin: 1em 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.agileits-services-info p{
+	color:#999999;
+	font-size:.9em;
+	line-height:1.8em;
+	margin:0;
+}
+.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-male,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-bicycle,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-cog,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-female{
+    background: #00bfff;
+    padding: .9em 0 0 0;
+    width: 90px;
+    height: 90px;
+    color: #FFFFFF;
+    font-size: 2em;
+}
+/*-- //services --*/
+
+
+
+
+
+
+
+
+
+
 
 
 	/* Conatct start */
@@ -109,6 +271,11 @@ left: 200px;
 				margin-top:25px;
 			}
 
+      #form.col-sm-6 {
+        padding-top: 15px !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+      }
+
 			.btn-send
 			{
 				width: 100%;
@@ -180,7 +347,8 @@ ul {
 
 
 section {
-  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 a {
