@@ -4,6 +4,8 @@ body {
   color: white;
 }
 
+/*navbar starts here*/
+
 .navbar {
   position: fixed !important;
   top: 0;
@@ -20,8 +22,6 @@ left: 200px;
 color: white;
 
 }
-
-
 
 .navbar-default .navbar-nav>li>a {
   color: #00bfff !important;
@@ -53,8 +53,11 @@ color: white;
   background-color: #00bfff !important;
   color: black !important;
 }
+/*navbar ends here*/
 
-/*index*/
+
+
+/*index starts here*/
 .jumbotron {
   width: 100%;
   text-align: center;
@@ -113,7 +116,9 @@ color: white;
 
 
 
-/*-- services --*/
+
+
+/*-- index-services --*/
 .about-header-top{
 	background: rgba(0, 0, 0, 0.7) !important;
 }
@@ -341,14 +346,14 @@ ul {
 }
 
 
-
-
-
-
-
 section {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+section .contact-uss {
+  background-image: url("images/swag.jpg");
+  background-size: cover;
 }
 
 a {
@@ -440,3 +445,185 @@ p.about-data {
   padding-left: 20px;
 
 }
+
+
+/*squad*/
+/* Three columns side by side */
+.column {
+    width: 49% !important;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    display: inline-block;
+}
+
+
+
+img.avi {
+  float:right;
+  margin-right: 20px;
+}
+
+button.button {
+  width: 50px !important;
+  width: 170px !important;
+  position: relative;
+  left: 165px;
+  top: 25px;
+}
+
+
+
+
+/* Display the columns below each other instead of side by side on small screens */
+@media (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+h2.name {
+  color: white !important;
+}
+
+ul.facts {
+  color: white !important;
+  float: left;
+}
+
+html {
+box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: #00bfff;
+    margin-left: 25px;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+}
+
+.button:hover {
+    background-color: salmon;
+    color: black;
+}
+
+/*squad ends*/
+
+/*film starts here*/
+
+.toolbar {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+
+}
+
+#portfolio {
+    margin: 1em 0;
+    margin-top: 30px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+}
+.tile {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+
+}
+.tile:hover {
+
+}
+
+.scale-anm {
+  transform: scale(1);
+}
+
+
+.tile img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+
+}
+
+.btn {
+    font-family: Lato;
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: normal;
+    padding: .5rem 1rem;
+    margin: 0;
+    height: auto;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    color: #00bfff;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold !important;
+    border: 1px dotted #FFF !important;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: #00bfff;
+  color: #FFF !important;
+  border: 1px solid #FFF !important;
+
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*film ends here*/

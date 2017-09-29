@@ -1,35 +1,91 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+
+
+
       <link rel="stylesheet" href="/css/style.css">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
+      <script src="js/jquery-1.11.0.min.js"></script>
 
 
 
-  <div class="film-cont">
+      <div class="toolbar mb2 mt2">
+      <button class="btn fil-cat" href="" data-rel="all">All</button>
+      <button class="btn fil-cat" data-rel="imgs">Images</button>
+      <button class="btn fil-cat" data-rel="vids">Videos</button>
+      <!-- <button class="btn fil-cat" data-rel="ways">Driveways</button> -->
+    </div>
 
-  <a href="www.youtube.com"> Youtube </a>
+    <script type="text/javascript">
+    $(function() {
+    		var selectedClass = "";
+    		$(".fil-cat").click(function(){
+    		selectedClass = $(this).attr("data-rel");
+         $("#portfolio").fadeTo(100, 0.1);
+    		$("#portfolio div").not("."+selectedClass).fadeOut().removeClass('scale-anm');
+        setTimeout(function() {
+          $("."+selectedClass).fadeIn().addClass('scale-anm');
+          $("#portfolio").fadeTo(300, 1);
+        }, 300);
+    	});
+    });
+    </script>
 
+    <div style="clear:both;"></div>
+    <div id="portfolio">
+      <div class="tile scale-anm imgs all">
+            <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm ways all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm vids all">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />
+      </div>
+      <div class="tile scale-anm ways all">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+      </div>
+      <div class="tile scale-anm vids all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm vids all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+      </div>
+      <div class="tile scale-anm vids all">
+               <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+            <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/the-ninetys-brand_02-300x300.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm ways all">
+                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/15-dia_1092-1-300x300.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+           <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />
+      </div>
+      <div class="tile scale-anm ways all">
+              <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+                <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm imgs all">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />
+      </div>
+      <div class="tile scale-anm ways all">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+      </div>
+    </div>
 
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-  </body>
-</html>
+    <div style="clear:both;"></div>
