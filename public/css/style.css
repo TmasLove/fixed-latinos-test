@@ -68,7 +68,7 @@ color: white;
 
 /*-------------- Video section  --------------*/
 #video-sec {
-  background: url('../images/video-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('https://www.youtube.com/watch?v=qIH0egHV4u') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -78,6 +78,10 @@ color: white;
 
 }
 
+.modal-content {
+  width: 700px !important;
+  height: 650px !important;
+}
 
 #video-sec .overlay {
   background: rgba(03,03,03,0.6);
@@ -143,7 +147,7 @@ color: white;
 .w3l-services-grid{
 	text-align:center;
 }
-.w3ls-services-img i.fa.fa-male,.w3ls-services-img i.fa.fa-bicycle,.w3ls-services-img i.fa.fa-cog,.w3ls-services-img i.fa.fa-female{
+.w3ls-services-img i.fa.fa-male,.w3ls-services-img i.fa.fa-bicycle,.w3ls-services-img i.fa.fa-cog,.w3ls-services-img i.fa.fa-angle-double-down, i.fa.fa-wrench{
     width: 90px;
     height: 90px;
     color: #dadfe2;
@@ -174,7 +178,7 @@ color: white;
 	line-height:1.8em;
 	margin:0;
 }
-.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-male,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-bicycle,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-cog,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-female{
+.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-male,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-bicycle,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-cog,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-angle-double-down,.w3l-services-grid:hover div.w3ls-services-img i.fa.fa-wrench{
     background: #00bfff;
     padding: .9em 0 0 0;
     width: 90px;
@@ -201,6 +205,11 @@ color: white;
         {
           text-align: center;
           color:#00bfff;
+        }
+
+        .header-title2 {
+          text-align: center;
+          color: black;
         }
 
         #tip
@@ -296,7 +305,9 @@ color: white;
 
 /*index ends*/
 
-
+ul.social {
+  margin-left: 45px;
+}
 
 
 .social li {
@@ -627,3 +638,8 @@ box-sizing: border-box;
 }
 
 /*film ends here*/
+
+
+/*footer starts here*/
+
+/*footer ends here*/

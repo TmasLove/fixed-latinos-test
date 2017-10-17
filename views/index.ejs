@@ -1,15 +1,11 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
@@ -66,11 +62,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
                         <h4 class="modal-title">YouTube Video</h4>
                     </div>
                     <div class="modal-body">
-                        <iframe id="cartoonVideo" width="560" height="315" src="https://www.youtube.com/watch?v=qIH0egHV4uA" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="cartoonVideo" width="660" height="515" src="https://www.youtube.com/embed/qIH0egHV4uA" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -90,17 +86,22 @@
 	<div class="services">
 		<div class="container">
 			<div class="w3layouts-services-heading">
-				<h2>Our Services</h2>
+				<h2>Our <span style="color:black;">Services</span></h2>
 			</div>
 			<div class="w3-services-grids">
 
         <div class="col-md-3 w3l-services-grid">
 					<div class="w3ls-services-img">
-						<i class="fa fa-male" aria-hidden="true"></i>
+						<i class="fa fa-wrench" aria-hidden="true"></i>
 					</div>
 					<div class="agileits-services-info">
-						<h4>Praesent tempor purus</h4>
-						<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+						<h4>Bike Shops</h4>
+						<p> Some of the Bike Shops we use </p>
+            <ul style="text-align:left;">
+              <li> Brickell Bikes </li>
+              <li> Mack Cycles </li>
+              <li> South Miami Bike Shop </li>
+            </ul>
 					</div>
 				</div>
 
@@ -110,7 +111,24 @@
 					</div>
 					<div class="agileits-services-info">
 						<h4>Weekly Rides</h4>
-						<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+            <p> Ride with Us </p>
+            <ul style="text-align:left;">
+              <li><strong>Monday:</strong> Hooligan Mondaze </li>
+              <li><strong>Tuesday:</strong> Taco Tuesday </li>
+              <li><strong>Wedsnesday:</strong> Fyxd305 </li>
+              <li><strong>Thursday:</strong> Rest </li>
+              <li><strong>Friday:</strong> KWBR </li>
+            </ul>
+					</div>
+				</div>
+
+        <div class="col-md-3 w3l-services-grid">
+					<div class="w3ls-services-img">
+						<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+					</div>
+					<div class="agileits-services-info">
+						<h4>Service Questions?</h4>
+						<p> Send us a message via email or contact-us form </p>
 					</div>
 				</div>
 
@@ -119,18 +137,12 @@
 						<i class="fa fa-cog" aria-hidden="true"></i>
 					</div>
 					<div class="agileits-services-info">
-						<h4>Service Questions?</h4>
-						<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
-					</div>
-				</div>
-
-        <div class="col-md-3 w3l-services-grid">
-					<div class="w3ls-services-img">
-						<i class="fa fa-female" aria-hidden="true"></i>
-					</div>
-					<div class="agileits-services-info">
-						<h4>Praesent tempor purus</h4>
-						<p>Donec non nibh in dui sagittis finibus. Duis suscipit, arcu vel rhoncus molestie, ipsum velit mattis nibh, id congue lacus lorem a elit. </p>
+						<h4>Sponsors</h4>
+            <ul style="text-align:center;">
+              <li>Fyxd305</li>
+              <li>...could be you </li>
+              <li>...could be you </li>
+            </ul>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -159,7 +171,7 @@
       		<form action="form.php" class="contact-form" method="post">
 
   		        <div class="form-group">
-  		          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+  		          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="">
   		        </div>
 
 
@@ -180,75 +192,14 @@
       </div>
     </div>
 
-    <div class="container second-portion">
-  	<div class="row">
-          <!-- Boxes de Acoes -->
-      	<div class="col-xs-12 col-sm-6 col-lg-4">
-  			<div class="box">
-  				<div class="icon">
-  					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-  					<div class="info">
-  						<h3 class="title">MAIL & WEBSITE</h3>
-  						<p>
-  							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp hi@fixedlatinos.bike
-  							<br>
-  							<br>
-  							<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.fixedlatinos.bike
-  						</p>
 
-  					</div>
-  				</div>
-  				<div class="space"></div>
-  			</div>
-  		</div>
 
-          <div class="col-xs-12 col-sm-6 col-lg-4">
-  			<div class="box">
-  				<div class="icon">
-  					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-  					<div class="info">
-  						<h3 class="title">CONTACT</h3>
-      					<p>
-  							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp 305-FIXED-FL
-  							<br>
-  							<br>
-  							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  305-FIXED-FL
-  						</p>
 
-  					</div>
-  				</div>
-  				<div class="space"></div>
-  			</div>
-  		</div>
-
-          <div class="col-xs-12 col-sm-6 col-lg-4">
-  			<div class="box">
-  				<div class="icon">
-  					<div class="image"><i class="fa fa-wifi" aria-hidden="true"></i></div>
-  					<div class="info">
-  						<h3 class="title">Social Media</h3>
-              <ul class="social">
-                  <li> <a href="https://www.facebook.com/groups/953436404735732/?ref=br_rs"> <i class=" fa fa-facebook">   </i> </a> </li>
-                  <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-                  <li> <a href="https://www.instagram.com/fixed_latinos/"> <i class="fa fa-instagram"> </i> </a> </li>
-                  <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
-              </ul>
-  					</div>
-  				</div>
-  				<div class="space"></div>
-  			</div>
-  		</div>
-  		<!-- /Boxes de Acoes -->
-
-  		<!--My Portfolio  dont Copy this -->
-
-  	</div>
-  </div>
   </div>
 
   <style type="text/css">
     body  {
-       background-image: url("swag.jpg");
+       /*background-image: url("swag.jpg");*/
        background-size: cover;
        }
 </style>
@@ -257,19 +208,8 @@
 
 
 
-<!-- <img class="logo" src="/images/logo.jpg"> -->
-
-
-
-
-
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/jquery.js"></script>
-
 <script src="js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 
 
 
