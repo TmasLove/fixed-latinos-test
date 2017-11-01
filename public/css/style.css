@@ -63,6 +63,7 @@ color: white;
   text-align: center;
   background-image: ur('/images/logo.jpg') !important;
   margin-top: 10px;
+  margin-bottom: -30px !important;
 }
 
 
@@ -392,10 +393,13 @@ nav {
 }
 
 .about-cont {
-  border: 1px solid salmon;
-  width: 100%;
+  width: 30%;
   height: 400px;
   padding-left: 10px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 75px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .main-cont {
@@ -437,9 +441,19 @@ p.about-data {
   padding-top: 30px;
 }
 
+
 .about-tit {
   text-align: center;
   color: salmon;
+  margin-top: 70px;
+}
+
+.carousel-container {
+  height: 452px;
+  width: 47% !important;
+  float: left;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .avatar {
