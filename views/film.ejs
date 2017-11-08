@@ -1,9 +1,6 @@
-<link rel="stylesheet" href="/css/style.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -19,8 +16,8 @@
 
 
 
-<div class="toolbar mb2 mt2">
-  <button class="btn fil-cat" href="" data-rel="all">All</button>
+<div class="toolbar">
+  <button class="btn fil-cat" data-rel="all">All</button>
   <button class="btn fil-cat" data-rel="imgs">Images</button>
   <button class="btn fil-cat" data-rel="vids">Videos</button>
 </div>
@@ -43,38 +40,53 @@
 
 <div style="clear:both;"></div>
 <div id="portfolio">
-  <div class="tile scale-anm imgs all">
-    <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg" alt="" />
-  </div>
 
-  <
 
-  <div class="tile scale-anm imgs all">
-    <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
-  </div>
-
-  <div class="tile scale-anm imgs all">
-    <img src="images/bikes/mb.jpg" alt="" />
-  </div>
 
   <div class="tile scale-anm vids all">
-    <a href="https://www.youtube.com/watch?v=D3a5WyWncSk">
-        <img src="images/video4-cover.png" alt="4" />
+    <a data-toggle="modal" href="#myModal-canons">
+      <img src="images/video4-cover.png" alt="4">
+    </a>
+  </div>
+  <div class="bs-example2">
+    <div id="myModal-canons" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content2">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
+            <h4 class="modal-title">Canones Suletos (8th ST)</h4>
+            <ul style="text-align:center;">
+              <li> Driver: Panda </li>
+              <li> Edited By: Anwar </li>
+            </ul>
+          </div>
+          <div class="modal-body">
+            <iframe id="looseCanons" width="660" height="515" src="https://www.youtube.com/embed/D3a5WyWncSk" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+
+
 
 
       <div class="tile scale-anm vids all">
-      <a data-toggle="modal" href="#myModal">
+      <a data-toggle="modal" href="#myModal-raven">
         <img src="images/video1-cover.png" alt="1" />
       </a>
-
+      </div>
       <div class="bs-example2">
-        <div id="myModal" class="modal fade">
+        <div id="myModal-raven" class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content2">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
-                <h4 class="modal-title"> Raven Go's HARD </h4>
+                <h4 class="modal-title"> Ultra CAT (03/2017) </h4>
+                <ul style="text-align:center;">
+                  <li> Driver: Raven </li>
+                  <li> Edited By: Anwar </li>
+                </ul>
               </div>
               <div class="modal-body">
                 <iframe id="raven" width="650" height="515" src="https://www.youtube.com/embed/zJcB2DMz-qQ" frameborder="0" allowfullscreen></iframe>
@@ -83,43 +95,85 @@
           </div>
         </div>
       </div>
-      </div>
 
       <div class="tile scale-anm vids all">
-        <a href="https://www.youtube.com/watch?v=4wF7xnGak48">
-        <img src="images/video2-cover.png" alt="2" />
+        <a data-toggle="modal" href="#myModal-brick">
+          <img src="images/video2-cover.png" alt="2" />
+        </a>
       </div>
-
-
-      <div class="tile scale-anm vids all">
-          <a data-toggle="modal" href="#myModal">
-            <img src="images/video3-cover.png" alt="3" />
-          </a>
-
-          <div class="bs-example2">
-              <div id="myModal" class="modal fade">
-                  <div class="modal-dialog">
-                      <div class="modal-content2">
-                          <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-                              <h4 class="modal-title">Pizza CAT</h4>
-                          </div>
-                          <div class="modal-body">
-                              <iframe id="pizzaCat" width="660" height="515" src="https://www.youtube.com/embed/7kpiGc7WzQA" frameborder="0" allowfullscreen></iframe>
-                          </div>
-                      </div>
-                  </div>
+      <div class="bs-example2">
+        <div id="myModal-brick" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content2">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
+                <h4 class="modal-title">Canones Suletos (Brickell)</h4>
+                <ul style="text-align:center;">
+                  <li> Driver: Kevin </li>
+                  <li> Edited By: Kevin </li>
+                </ul>
               </div>
+              <div class="modal-body">
+                <iframe id="brickell" width="660" height="515" src="https://www.youtube.com/embed/4wF7xnGak48" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="tile scale-anm vids all">
+        <a data-toggle="modal" href="#myModal-pizza">
+          <img src="images/video3-cover.png" alt="3" />
+        </a>
+      </div>
+    <div class="bs-example2">
+      <div id="myModal-pizza" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content2">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
+              <h4 class="modal-title">Pizza CAT</h4>
+              <ul style="text-align:center;">
+                <li> Driver: Kevin </li>
+                <li> Edited By: Kevin </li>
+              </ul>
+            </div>
+            <div class="modal-body">
+              <iframe id="pizzaCat" width="660" height="515" src="https://www.youtube.com/embed/7kpiGc7WzQA" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
+    <!-- Videos ^^ end here -->
+
+
+
+
+    <div class="tile scale-anm imgs all">
+      <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg" alt="" />
+    </div>
+
+
+    <div class="tile scale-anm imgs all">
+      <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
+    </div>
+
+    <div class="tile scale-anm imgs all">
+      <img src="images/bikes/mb.jpg" alt="" />
+    </div>
+
 
     <div class="tile scale-anm imgs all">
       <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
     </div>
 
       <div class="tile scale-anm imgs all">
-            <img src="images/sq.jpg" alt="" />
+          <img src="images/sq.jpg" alt="" />
       </div>
 
 
@@ -129,7 +183,7 @@
 
 
       <div class="tile scale-anm imgs all">
-                <img src="images/bikes/birds.jpg" alt="" />
+          <img src="images/bikes/birds.jpg" alt="" />
       </div>
 
       <div class="tile scale-anm imgs all">
