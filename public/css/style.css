@@ -83,8 +83,9 @@ color: white;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
-
-
+  text-align: center;
+  position: relative;
+  color: #fff;
 }
 
 
