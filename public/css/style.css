@@ -76,8 +76,18 @@ color: white;
     text-align: center;
   position: relative;
     color: #fff;
+}
+
+#video-sec2 {
+  background: url('https://www.youtube.com/watch?v=zJcB2DMz-qQ') 50% 0 repeat-y fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+
 
 }
+
+
 
 .modal-content {
   width: 700px !important;
