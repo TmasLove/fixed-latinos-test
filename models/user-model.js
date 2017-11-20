@@ -4,10 +4,19 @@ const Schema = mongoose.Schema;
 
 const myUserSchema = new Schema (
   {     //1st argument -> structure object
-    fullName: {type: String},
-    username: {type: String},
+    fullName: {
+      type: String,
+      required: true
+    },
+    username: {
+      type: String,
+      required: true
+    },
     //SIGN UP/LOG IN FORM users --------
-    encryptedPassword: {type: String},
+    encryptedPassword: {
+      type: String,
+      required: true
+    },
   },
   {     // 2nd argument -> additional settings
     timestamps: true

@@ -608,8 +608,8 @@ box-sizing: border-box;
   text-align: center;
   margin-top: 50px;
   padding-top: 20px;
-
 }
+
 
 #portfolio {
     margin: 1em 0;
@@ -661,8 +661,8 @@ box-sizing: border-box;
     height: auto;
     vertical-align: middle;
     -webkit-appearance: none;
-    color: #00bfff;
-    background-color: rgba(0, 0, 0, 0);
+    color: salmon;
+    background-color: rgba(0, 0, 0, 0.1);
     font-weight: bold !important;
     border: 1px dotted #FFF !important;
 }
