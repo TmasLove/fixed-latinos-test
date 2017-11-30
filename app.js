@@ -80,6 +80,9 @@ app.get('/squad', (request, response, next) => {
   response.render('squad.ejs');
 });
 
+app.get('/photo-gallery', (request, response, next) => {
+  response.render('photo-gallery.ejs');
+});
 
 
 //-----ROUTES GO HERE ^^^-------------------------------------------------------

@@ -5,8 +5,94 @@ body {
 }
 
 /*navbar starts here*/
+nav {
+    display: table;
+    border-top: 1px solid #00bfff;
+    border-bottom: 1px solid #00bfff;
+    background-color: black;
+    padding-bottom: 1.45em !important;
+    padding-top: 0.5em;
+}
 
-.navbar {
+.navbar-brand {
+  color: #00bfff !important;
+  transition: 0.3s ease;
+
+}
+
+.navbar-brand:hover {
+  padding: 20px 10px;
+  background-color: #00bfff !important;
+  color: black !important;
+}
+
+
+nav ul {
+    display: table-row;
+	  position: relative;
+    margin-left: 0;
+    padding: 0;
+    z-index: 1;
+    margin-top: 5px;
+}
+nav ul a {
+	display: block;
+	color: #00bfff;
+	text-decoration: none;
+	padding: 5px 15px;
+	font-family: Arial, Helvetica, sans-serif;
+  left: 0em;
+  position: relative;
+}
+nav ul li {
+	position: relative;
+  display: inline-block;
+  display: table-cell;
+  width: 15em;
+	list-style-type: none;
+	text-align: center;
+  left: 13em;
+}
+
+ol li {
+  position: relative;
+  left: 20px !important;
+  text-align: center;
+}
+
+nav ol li:hover {
+  background-color: #00bfff;
+  width: 10em;
+}
+
+nav ul li:hover {
+	background-color: #00bfff;
+  width: 15em;
+}
+
+nav ul li:hover a {
+    color: white;
+}
+
+
+nav ul ol{
+	display: none;
+	position: absolute;
+	background: rgba(0,0,0,0.4);
+    width: 100%;
+    padding-top: 2.7em;
+}
+/*this is ^^ the galler*/
+
+nav ul ol li {
+	width: 100%;
+    display: inline-block;
+}
+
+nav ul li:hover > ol {
+	display: block;
+}
+/*.navbar {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -41,6 +127,23 @@ color: white;
   color: white !important;
 }
 
+.dpdwn ol{
+    display: none;
+    color: #00bfff !important;
+    transition: 0.3s ease;
+    padding: 15px;
+    margin: 0 15px;
+    text-align: center;
+    background-color: black;
+
+}
+.dpdwn:hover ol {
+    display:block;
+    border-left: 3px solid #00bfff;
+    border-right: 3px solid #00bfff;
+    color: white !important;
+}
+
 
 .navbar-brand {
   color: #00bfff !important;
@@ -52,7 +155,7 @@ color: white;
   padding: 20px 10px;
   background-color: #00bfff !important;
   color: black !important;
-}
+}*/
 /*navbar ends here*/
 
 

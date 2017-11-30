@@ -1,10 +1,16 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/magnific-popup.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.bsPhotoGallery.css">
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/jquery-1.11.0.min.js"></script>
-<style type="text/css">
+<script src="js/jquery.bsPhotoGallery.js"></script>
+</script>
+
+ <style type="text/css">
     .bs-example2{
       margin: 20px;
     }
@@ -16,10 +22,13 @@
 
 
 
+
+
+
 <div class="toolbar">
   <button class="btn fil-cat" data-rel="all">All</button>
-  <button class="btn fil-cat" data-rel="imgs">Images</button>
-  <button class="btn fil-cat" data-rel="vids">Videos</button>
+  <button class="btn fil-cat" data-rel="race">Race Videos</button>
+  <button class="btn fil-cat" data-rel="vids">4Fun Videos</button>
 </div>
 
 <script type="text/javascript">
@@ -38,12 +47,17 @@
 </script>
 
 
+
+
+
+
+
 <div style="clear:both;"></div>
 <div id="portfolio">
 
 
 
-  <div class="tile scale-anm vids all">
+  <div class="tile scale-anm race all">
     <a data-toggle="modal" href="#myModal-canons">
       <img src="images/video4-cover.png" alt="4">
     </a>
@@ -71,7 +85,7 @@
 
 
 
-      <div class="tile scale-anm vids all">
+      <div class="tile scale-anm race all">
       <a data-toggle="modal" href="#myModal-raven">
         <img src="images/video1-cover.png" alt="1" />
       </a>
@@ -96,7 +110,7 @@
         </div>
       </div>
 
-      <div class="tile scale-anm vids all">
+      <div class="tile scale-anm race all">
         <a data-toggle="modal" href="#myModal-brick">
           <img src="images/video2-cover.png" alt="2" />
         </a>
@@ -124,7 +138,7 @@
 
 
 
-      <div class="tile scale-anm vids all">
+      <div class="tile scale-anm race all">
         <a data-toggle="modal" href="#myModal-pizza">
           <img src="images/video3-cover.png" alt="3" />
         </a>
@@ -149,54 +163,38 @@
       </div>
     </div>
 
+
+
+    <div class="tile scale-anm vids all">
+      <a data-toggle="modal" href="#myModal-max-deliveries">
+        <img src="images/max-deliveries.png" alt="3" />
+      </a>
+    </div>
+  <div class="bs-example2">
+    <div id="myModal-max-deliveries" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content2">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
+            <h4 class="modal-title">Max Running Deliveries w/ Kyle</h4>
+            <ul style="text-align:center;">
+              <li> Driver: Max & Kyle </li>
+              <li> Edited By: Max  </li>
+            </ul>
+          </div>
+          <div class="modal-body">
+            <iframe id="max-deliveries" width="660" height="515" src="https://www.youtube.com/embed/3do9BvDeBYw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Videos ^^ end here -->
 
 
 
-
-    <div class="tile scale-anm imgs all">
-      <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg" alt="" />
-    </div>
-
-
-    <div class="tile scale-anm imgs all">
-      <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
-    </div>
-
-    <div class="tile scale-anm imgs all">
-      <img src="images/bikes/mb.jpg" alt="" />
-    </div>
-
-
-    <div class="tile scale-anm imgs all">
-      <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
-    </div>
-
-      <div class="tile scale-anm imgs all">
-          <img src="images/sq.jpg" alt="" />
-      </div>
-
-
-      <div class="tile scale-anm imgs all">
-           <img src="images/420.jpg" alt="" />
-      </div>
-
-
-      <div class="tile scale-anm imgs all">
-          <img src="images/bikes/birds.jpg" alt="" />
-      </div>
-
-      <div class="tile scale-anm imgs all">
-          <img src="images/bikes/oe.png" alt="" />
-      </div>
-
-
-
-
-
-    </div>
-
-    <div style="clear:both;"></div>
 
 
     <style>
