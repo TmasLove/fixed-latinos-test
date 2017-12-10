@@ -1,13 +1,8 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/magnific-popup.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/jquery.bsPhotoGallery.css">
-
-
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/jquery.bsPhotoGallery.js"></script>
 </script>
 
  <style type="text/css">
@@ -19,6 +14,8 @@
         display: block;
     }
 </style>
+
+
 
 
 
@@ -75,7 +72,7 @@
             </ul>
           </div>
           <div class="modal-body">
-            <iframe id="looseCanons" width="660" height="515" src="https://www.youtube.com/embed/D3a5WyWncSk" frameborder="0" allowfullscreen></iframe>
+            <iframe id="filmVideo" width="660" height="515" src="https://www.youtube.com/embed/D3a5WyWncSk" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -103,7 +100,7 @@
                 </ul>
               </div>
               <div class="modal-body">
-                <iframe id="raven" width="650" height="515" src="https://www.youtube.com/embed/zJcB2DMz-qQ" frameborder="0" allowfullscreen></iframe>
+                <iframe id="" width="650" height="515" src="https://www.youtube.com/embed/zJcB2DMz-qQ" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -128,7 +125,7 @@
                 </ul>
               </div>
               <div class="modal-body">
-                <iframe id="brickell" width="660" height="515" src="https://www.youtube.com/embed/4wF7xnGak48" frameborder="0" allowfullscreen></iframe>
+                <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/4wF7xnGak48" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -156,7 +153,7 @@
               </ul>
             </div>
             <div class="modal-body">
-              <iframe id="pizzaCat" width="660" height="515" src="https://www.youtube.com/embed/7kpiGc7WzQA" frameborder="0" allowfullscreen></iframe>
+              <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/7kpiGc7WzQA" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -183,7 +180,7 @@
             </ul>
           </div>
           <div class="modal-body">
-            <iframe id="max-deliveries" width="660" height="515" src="https://www.youtube.com/embed/3do9BvDeBYw" frameborder="0" allowfullscreen></iframe>
+            <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/3do9BvDeBYw" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -211,3 +208,23 @@
 
 
     </style>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        /* Get iframe src attribute value i.e. YouTube video url
+        and store it in a variable */
+        var url = $("#filmVideo").attr('src');
+
+        /* Assign empty url value to the iframe src attribute when
+        modal hide, which stop the video playing */
+        $("#myModal").on('hide.bs.modal', function(){
+            $("#filmVideo").attr('src', '');
+        });
+
+        /* Assign the initially stored url back to the iframe src
+        attribute when modal is displayed again */
+        $("#myModal").on('show.bs.modal', function(){
+            $("#filmVideo").attr('src', url);
+        });
+    });
+    </script>
