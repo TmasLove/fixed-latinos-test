@@ -50,7 +50,7 @@
 <div class="container">
     <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding-top:50px; margin-bottom:40px;">
         <h3 style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">
-            <a style="text-decoration:none; color:#666; padding-top:60px;" href="">SQUAD Photo Gallery TEST</a>
+            <a style="text-decoration:none; color:#666; padding-top:60px;" href="">Photo Gallery</a>
         </h3>
     </div>
 
@@ -59,17 +59,20 @@
       <button class="btn fil-cat" data-rel="bikes">Bikes</button>
       <button class="btn fil-cat" data-rel="events">Events</button>
     </div>
+    <br>
+    <br>
+
 
     <script type="text/javascript">
     $(function() {
       var selectedClass = "";
       $(".fil-cat").click(function() {
         selectedClass = $(this).attr("data-rel");
-        $(".row first").fadeTo(100, 0.1);
-        $(".row first li").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+        $("ul").fadeTo(100, 0.1);
+        $("ul li").not("." + selectedClass).fadeOut().removeClass('scale-anm');
         setTimeout(function() {
           $("." + selectedClass).fadeIn().addClass('scale-anm');
-          $(".row first").fadeTo(300, 1);
+          $("ul").fadeTo(300, 1);
         }, 300);
       });
     });
@@ -77,45 +80,45 @@
 
 
     <ul class="row first">
-        <li class="scale-anm all">
-            <img alt="Rocking the night away"  src="images/video4-cover.png">
-            <div class="text">This is a Test! VSD:KNVS:D</div>
+        <li class="bikes all">
+            <img alt="Sweet Background"  src="images/bikes/birds.jpg">
+            <div class="text">All Bl4ck Everything</div>
         </li>
         <li class="bikes all">
-            <img alt="Yellow sign"  src="http://demo.michaelsoriano.com/images/photodune-287182-blah-blah-blah-yellow-road-sign-xs.jpg">
-            <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+            <img alt="David's Bike"  src="images/bikes/david.jpg">
+            <div class="text">HeavyMetal's Cinelli</div>
         </li>
-        <li class="events all">
-            <img alt="Colors"  src="http://demo.michaelsoriano.com/images/photodune-460760-colors-xs.jpg">
-             <div class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
+        <li class="bikes all">
+            <img alt="Garrys Bike"  src="images/bikes/garry.jpg">
+             <div class="text">El Cuco's Unknown combat</div>
         </li>
-        <li class="all">
-            <img alt="Retro party"  src="http://demo.michaelsoriano.com/images/photodune-461673-retro-party-xs.jpg">
-            <div class="text">Lorem, do eiusmod tempor incid Ut enim ad minim veniam</div>
+        <li class="bikes all">
+            <img alt="Genes Bike"  src="images/bikes/gene-bike.jpeg">
+            <div class="text">Papa Ash's Bianchi</div>
         </li>
-        <li class="all">
-            <img alt="Technology soup"  src="http://demo.michaelsoriano.com/images/photodune-514834-touchscreen-technology-xs.jpg">
-            <div class="text">Do eiusmod tempor</div>
+        <li class="bikes all">
+            <img alt="Luis's Bike"  src="images/bikes/luis-bike.png">
+            <div class="text">BBQ Specialists ride</div>
         </li>
-        <li class="all">
-            <img alt="Legal docs"  src="http://demo.michaelsoriano.com/images/photodune-916206-legal-xs.jpg" data-bsp-large-src="http://demo.michaelsoriano.com/images/photodune-916206-legal-large.jpg">
-            <div class="text">Eiusmod tempor enim ad minim veniam</div>
+        <li class="bikes all">
+            <img alt="Sweet Miami Beach"  src="images/bikes/mb.jpg">
+            <div class="text">Sexy MiamiBeach Picture</div>
         </li>
-        <li class="all">
-            <img alt="Nature shot"  src="http://demo.michaelsoriano.com/images/photodune-1062948-nature-xs.jpg">
-            <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <li class="bikes all">
+            <img alt="Tommy's Dolan"  src="images/bikes/me.jpg">
+            <div class="text">A Sexy Dolan overlooking our 305 skyline.</div>
         </li>
-        <li class="all">
-            <img alt="Kid with camera" src="http://demo.michaelsoriano.com/images/photodune-1471528-insant-camera-kid-xs.jpg" data-bsp-large-src="http://demo.michaelsoriano.com/images/photodune-1471528-insant-camera-kid-large.jpg">
-            <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <li class="bikes all">
+            <img alt="Loving the Tape" src="images/bikes/oe.png">
+            <div class="text">Sexy cockpit view.</div>
         </li>
-        <li class="all">
-            <img alt="Relax and Chill" src="http://demo.michaelsoriano.com/images/photodune-2255072-relaxed-man-xs.jpg">
-            <div class="text">Eiusmod tempor enim ad minim veniam</div>
+        <li class="bikes all">
+            <img alt="Panda's Bike" src="images/bikes/panda-bike.png">
+            <div class="text">Panda's sexy Aventon Team ride.</div>
         </li>
-        <li class="all">
-            <img alt="Cool colors" src="http://demo.michaelsoriano.com/images/photodune-2360379-colors-xs.jpg">
-            <div class="text">Consectetur adipiscing elit</div>
+        <li class="bikes all">
+            <img alt="Anwars Bike" src="images/bikes/war-bike.png">
+            <div class="text">Anwar's clean persuit.</div>
         </li>
         <li class="all">
             <img alt="Jump over"  src="http://demo.michaelsoriano.com/images/photodune-2360571-jump-xs.jpg">
