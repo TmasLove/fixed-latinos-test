@@ -7,9 +7,8 @@ body {
 /*navbar starts here*/
 nav {
     display: table;
-    border-top: 1px solid #00bfff;
     border-bottom: 1px solid #00bfff;
-    background-color: black;
+    background-color: #333;
     padding-bottom: 1.45em !important;
     padding-top: 0.5em;
 }
@@ -41,9 +40,11 @@ nav ul a {
 	text-decoration: none;
 	padding: 5px 15px;
 	font-family: Arial, Helvetica, sans-serif;
-  left: 0em;
   position: relative;
+  font-weight: 200;
 }
+
+
 nav ul li {
 	position: relative;
   display: inline-block;
@@ -60,9 +61,14 @@ ol li {
   text-align: center;
 }
 
-nav ol li:hover {
+nav ol li.pg a {
+  position: relative;
+  text-align: center;
+  right: 2.7em !important;}
+
+nav ol li.pg:hover {
   background-color: #00bfff;
-  width: 10em;
+  width: 9.3em;
 }
 
 nav ul li:hover {
@@ -71,14 +77,14 @@ nav ul li:hover {
 }
 
 nav ul li:hover a {
-    color: white;
+    color: black;
 }
 
 
 nav ul ol{
 	display: none;
 	position: absolute;
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.6);
     width: 100%;
     padding-top: 2.7em;
 }
@@ -193,6 +199,7 @@ color: white;
 
 .modal-title {
   text-align: center !important;
+  margin-left: 2em !important;
 }
 
 .modal-header {
@@ -340,6 +347,7 @@ color: white;
 
 	/* Conatct start */
 
+
         .header-title
         {
           text-align: center;
@@ -349,6 +357,7 @@ color: white;
         .header-title2 {
           text-align: center;
           color: black;
+
         }
 
         #tip
@@ -577,24 +586,43 @@ p.about-data {
   margin-left: 50px;
 }
 
-/* .avatar {
-  border: 1px solid red;
-  height: 100px;
-  width: 105px;
-  border-radius: 100%;
+/*TEAM SQUAD bike sizes*/
+.panda-bike {
+  width: 100%;
+  height: 24em;
 }
 
-.ava-cont {
-  border: 1px solid salmon;
-  height: 300px;
-  width: 500px;
-  padding-left: 20px;
+.tommy-bike {
+  width: 100%;
+  height: 20em;
+}
 
-} */
+.garry-bike {
+  width: 100%;
+  height: 20em;
+}
 
+.david-bike {
+  width: 100%;
+  height: 20em;
+}
 
-/*squad*/
-/* Three columns side by side */
+.victor-bike {
+  width: 100%;
+  height: 20em;
+}
+
+.gene-bike {
+  width: 100%;
+  height: 20em;
+}
+
+.luis-bike {
+  width: 100%;
+  height: 20em;
+}
+
+/* TEAM RIDERS ends ^^^ here */
 
 /* flip test */
 /* entire container, keeps perspective */
@@ -610,6 +638,7 @@ p.about-data {
   width: 30em;
   height: 20em;
   margin-top: 2em;
+  margin-left: 1em;
 }
 
 /* flip speed goes here */
