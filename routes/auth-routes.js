@@ -9,60 +9,18 @@ const UserModel = require('../models/user-model');
 const router = express.Router();
 
 
-router.post('/signup', (req, res, next) => {
-    // if (!req.body.signupEmail || !req.body.signupPassword) {
-    //     // 400 for client errors (user needs to fix something)
-        // res.status(400).json({ message: 'Need both email and password 💩' });
-        // return;
-    // }
-    UserModel.findOne(
-      { email: req.body.signupEmail },
-      (err, userFromDb) => {
+router.get('/login', (req, res, next) => {
+  res.render('auth-views/login-view.ejs');
+});
 
-          if (err) {
-            // 500 for server errors (nothing user can do)
-            res.status(500).json({ message: 'Email check went to 💩' });
-            return;
-          }
-
-          if (userFromDb) {
-            // 400 for client errors (user needs to fix something)
-            res.status(400).json({ message: 'Email already exists 💩' });
-            return;
-          }
-
-          const salt = bcrypt.genSaltSync(10);
-          const scrambledPassword = bcrypt.hashSync(req.body.signupPassword, salt);
-
-          const theUser = new UserModel({
-            fullName: req.body.signupFullName,
-            username: req.body.signupUsername,
-            encryptedPassword: scrambledPassword
-          });
-
-          theUser.save((err) => {
-              if (err) {
-                res.status(500).json({ message: 'User save went to 💩' });
-                return;
-              }
-
-              req.login(theUser, (err) => {
-                if (err) {
-                  res.status(500).json({ message: 'login went to shit' });
-                  return;
-                }
-              });
-              theUser.encryptedPassword = undefined;
-              res.status(200).json(theUser);
-
-              // Automatically logs them in after the sign up
-              // (req.login() is defined by passport)
-               // close req.login()
-          }); // close theUser.save()
-      }
-    ); // close UserModel.findOne()
-}); // close router.post('/signup', ...
-
+router.post('/login', passport.authenticate(
+  'local', //1st argument -> name of the strategy
+  //                            (determined by the strategy's npm package)
+  { //2nd argument -> settings object
+    successRedirect: '/generate-memes', //"successRedirect" (where to go if login worked)
+    failureRedirect: '/login' //"failureRedirect" (where to go if login failed)
+  }
+));
 
 // This is different because passport.authenticate() redirects
 // (APIs normally shouldn't redirect)
@@ -103,6 +61,13 @@ router.post('/login', (req, res, next) => {
 });
 
 
+
+
+
+
+
+
+//END LOGIN --------------------------------------------------------------------
 router.post('/logout', (req, res, next) => {
     // req.logout() is defined by passport
     req.logout();

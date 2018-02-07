@@ -8,12 +8,22 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
 const passport    = require('passport');
+// const multer       = require('multer');
+// const upload = multer({ dest: 'uploads/' });
 
+
+require('dotenv').config();
+
+require('./config/passport-config');
 
 const app = express();
 
 
-// mongoose.connect('mongodb://localhost/fixed-latinos-test');
+
+
+
+
+mongoose.connect('mongodb://localhost/fixed-latinos-test');
 
 
 app.listen(3005);
@@ -34,7 +44,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 app.use(session({
-  secret: 'kfjbeLSKFABSzkdbs',
+  secret: 'veksjfbsekfsaeSGSadfjbva',
   resave: true,
   saveUninitialized: true
 
@@ -43,6 +53,10 @@ app.use(session({
 //passport middlewears, these need to come after the app.use(session(....));
 app.use(passport.initialize());
 app.use(passport.session());
+// app.use(cors({
+//   credentials: true,
+//   origin: ['http://localhost:3005']
+// }));
 //-----passport middlewears ^^ -------------------------------------------------
 
 //THIS MIDDLEWARE CREATES the "currentUser" for ALL VIEWS
@@ -88,6 +102,9 @@ app.get('/shop', (request, response, next) => {
   response.render('shop.ejs');
 });
 
+app.get('/login', (request, response, next) => {
+  response.render('auth-views/login-view.ejs');
+});
 
 //-----ROUTES GO HERE ^^^-------------------------------------------------------
 

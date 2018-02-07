@@ -832,8 +832,8 @@ box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-
 	padding: 50px 50px;
+  border-top: 1px solid #00bfff;
 }
 
 .footer-distributed .footer-left,
@@ -995,3 +995,28 @@ box-sizing: border-box;
 
 
 /*footer ends here*/
+
+
+
+
+
+
+/* AUTH VIEWS */
+.container2 {
+  margin-top: 5%;
+  text-align: center;
+}
+
+#loginform {
+  color: white;
+  padding-bottom: 13%;
+  padding-top: 1%
+}
+
+#username-input {
+  color: black;
+}
+
+#password-input {
+  color: black;
+}
