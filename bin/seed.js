@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/fixed-latinos-test');
 
-// mongoose.connect('mongodb://heroku_v1bzt6xz:nnqqhuba0b6unvqmujj5bt58eu@ds125588.mlab.com:25588/heroku_v1bzt6xz');
+mongoose.connect('mongodb://localhost:27017/fixed-latinos', {useMongoClient: true});
 
 
 const User = require('../models/user-model.js');
@@ -36,3 +35,7 @@ const myUserArray = [
   }
 
 ];
+
+myUserArray.forEach((username) => {
+  User.save(myUserSchema);
+   });

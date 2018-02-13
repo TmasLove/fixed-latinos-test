@@ -77,7 +77,7 @@ nav ul li:hover {
 }
 
 nav ul li:hover a {
-    color: black;
+    color: white;
 }
 
 
@@ -200,6 +200,7 @@ color: white;
 .modal-title {
   text-align: center !important;
   margin-left: 2em !important;
+  color: salmon;
 }
 
 .modal-header {

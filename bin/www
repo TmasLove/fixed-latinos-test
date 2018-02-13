@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('fixed-latinos-test:server');
+var debug = require('debug')('fixed-latinos:server');
 var http = require('http');
 
 /**

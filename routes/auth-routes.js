@@ -17,7 +17,7 @@ router.post('/login', passport.authenticate(
   'local', //1st argument -> name of the strategy
   //                            (determined by the strategy's npm package)
   { //2nd argument -> settings object
-    successRedirect: '/generate-memes', //"successRedirect" (where to go if login worked)
+    successRedirect: '/admin', //"successRedirect" (where to go if login worked)
     failureRedirect: '/login' //"failureRedirect" (where to go if login failed)
   }
 ));

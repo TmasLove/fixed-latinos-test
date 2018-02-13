@@ -8,11 +8,11 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
 const passport    = require('passport');
-// const multer       = require('multer');
-// const upload = multer({ dest: 'uploads/' });
+const multer       = require('multer');
+const upload = multer({ dest: 'uploads/' });
 
 
-require('dotenv').config();
+// require('dotenv').config();
 
 require('./config/passport-config');
 
@@ -23,7 +23,7 @@ const app = express();
 
 
 
-mongoose.connect('mongodb://localhost/fixed-latinos-test');
+mongoose.connect('mongodb://localhost:27017/fixed-latinos', {useMongoClient: true});
 
 
 app.listen(3005);
@@ -79,6 +79,12 @@ app.use('/', index);
 
 const myAuthRoutes = require('./routes/auth-routes.js');
 app.use('/', myAuthRoutes);
+
+const myPgPost = require('./routes/pg-post.js');
+app.use('/', myPgPost);
+
+const myAdminUploads = require('./routes/admin-uploads.js');
+app.use('/', myAdminUploads);
 
 
 app.get('/film', (request, response, next) => {
