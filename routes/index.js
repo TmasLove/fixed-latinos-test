@@ -14,12 +14,12 @@ router.get('/', (req, res, next) => {
 
 //We want this page to only be visible to logged in users
 router.get('/members', (req, res, next) => {
-  if(req.user) {
-    res.render('members-only-view.ejs');
-  }
-  else {
-    res.redirect('/login');
-  }
-});
+  // if(req.user) {
+    res.render('members-view.ejs');
+  });
+  // else {
+  //   res.redirect('/login');
+  // }
+// });
 
 module.exports = router;

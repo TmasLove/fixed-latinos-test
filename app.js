@@ -83,8 +83,6 @@ app.use('/', myAuthRoutes);
 const myPgPost = require('./routes/pg-post.js');
 app.use('/', myPgPost);
 
-const myAdminUploads = require('./routes/admin-uploads.js');
-app.use('/', myAdminUploads);
 
 
 app.get('/film', (request, response, next) => {
