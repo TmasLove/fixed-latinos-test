@@ -3,7 +3,7 @@ const router = express.Router();
 const models = require('../models/pg-post-model.js');
 
 
-router.post('/film', (req, res, next) => {
+router.post('/photo-gallery', (req, res, next) => {
     const myPost = new models ({
       username: req.user.username,
       image_path: req.body.imageData
@@ -16,7 +16,7 @@ router.post('/film', (req, res, next) => {
         return;
       }
 
-      res.redirect('/film');
+      res.redirect('/login');
     });
 
 });

@@ -10,6 +10,7 @@ const session      = require('express-session');
 const passport    = require('passport');
 const multer       = require('multer');
 const upload = multer({ dest: 'uploads/' });
+const User = require('./models/user-model.js');
 
 
 // require('dotenv').config();
@@ -17,10 +18,6 @@ const upload = multer({ dest: 'uploads/' });
 require('./config/passport-config');
 
 const app = express();
-
-
-
-
 
 
 mongoose.connect('mongodb://localhost:27017/fixed-latinos', {useMongoClient: true});
@@ -84,7 +81,6 @@ const myPgPost = require('./routes/pg-post.js');
 app.use('/', myPgPost);
 
 
-
 app.get('/film', (request, response, next) => {
   response.render('film.ejs');
 });
@@ -102,12 +98,16 @@ app.get('/photo-gallery', (request, response, next) => {
   response.render('photo-gallery.ejs');
 });
 
-app.get('/shop', (request, response, next) => {
-  response.render('shop.ejs');
-});
+// app.get('/shop', (request, response, next) => {
+//   response.render('shop.ejs');
+// });
 
 app.get('/login', (request, response, next) => {
   response.render('auth-views/login-view.ejs');
+});
+
+app.get('/signup', (request, response, next) => {
+  response.render('auth-views/signup-view.ejs');
 });
 
 //-----ROUTES GO HERE ^^^-------------------------------------------------------

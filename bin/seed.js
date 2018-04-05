@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
-
-
 mongoose.connect('mongodb://localhost:27017/fixed-latinos', {useMongoClient: true});
 
 
-const User = require('../models/user-model.js');
+const theUser = require('../models/user-model.js');
 
 
 const myUserArray = [
@@ -15,27 +13,27 @@ const myUserArray = [
   },
   {
     username: 'garry',
-    password: 'elcuco'
+    password: 'fixed'
   },
   {
     username: 'david',
-    password: 'metal'
+    password: 'fixed'
   },
   {
     username: 'panda',
-    password: 'modafocka'
+    password: 'fixed'
   },
   {
     username: 'gene',
-    password: 'pentalon'
+    password: 'fixed'
   },
   {
     username: 'luis',
-    password: 'nolegs'
+    password: 'fixed'
   }
 
 ];
 
-myUserArray.forEach((username) => {
-  User.save(myUserSchema);
-   });
+// myUserArray.forEach((username) => {
+//   User.save(myUserSchema);
+//    });
