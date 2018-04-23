@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fixed Latinos</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://use.fontawesome.com/1f1f819977.js"></script>
   <script src="js/jquery-1.11.0.min.js"></script>
 
 </head>
@@ -27,11 +26,17 @@
                           <li class="pg"><a href="/photo-gallery">Gallery</a></li>
 
                       </ol>
+                  <% if (typeof currentUser === 'object') { %>
+                    <li><a href="/members">Members</a></li>
+                  <%  } else { %>
+                    <li><a href="/login">Login</a></li>
+                    <%  } %>
                   </li>
                   <!-- <li><a href="/shop">Shop</a></li> -->
             </ul>
     </nav>
-  </header>
+
+</header>
 
 
   <%- body %>
@@ -55,7 +60,7 @@
       <a href="/film">Film</a>
       ·
       <a href="/photo-gallery">Gallery</a>
-      
+
       <!-- <a href="/shop">Shop</a> -->
     </p>
 
@@ -79,7 +84,7 @@
       <i class="fa fa-envelope"></i>
       <p><a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edcec2c0ddccc3d483cec2c0">
         <!-- <span class="__cf_email__" data-cfemail="14676164647b666054777b7964757a6d3a777b79">[email&#160;protected]</span> -->
-        poop@FixedLatinos.com</a></p>
+        hi@FixedLatinos.com</a></p>
     </div>
 
   </div>

@@ -1075,3 +1075,10 @@ margin-top: 1em;
 #password-input {
   color: black;
 }
+
+
+/* SIGNUP VIEW */
+.container3 {
+  margin-top: 5%;
+  text-align: center;
+}

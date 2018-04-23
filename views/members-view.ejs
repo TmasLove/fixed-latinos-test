@@ -24,7 +24,14 @@
 
 <h1 style="color:white;margin-left:5%;margin-top:2em;"> Photo Gallery Uploads </h1>
 
-<form enctype="multipart/form-data">
+<input type="file" id="input" multiple onchange="handleFiles(this.files)">
+
+
+
+
+
+
+<!-- <form enctype="multipart/form-data">
     <div class="file-loading">
         <input id="kv-explorer" type="file" multiple>
     </div>
@@ -44,19 +51,8 @@
 
 <hr style="background-color:salmon;width:28%;"> <br>
 
-<h1 style="color:white;margin-left:5%;margin-top:2em;"> Video Gallery Uploads </h1>
-<form enctype="multipart/form-data">
-    <div class="file-loading">
-        <input id="kv-explorer" type="file" multiple>
-    </div>
-    <br>
-    <div class="file-loading">
-        <input id="file-0a" class="file" type="file" multiple data-min-file-count="1">
-    </div>
-    <br>
-    <button style="margin-left:5%;" type="submit" class="btn btn-primary">Submit</button>
-    <button type="reset" class="btn btn-default">Reset</button>
-</form>
+<h1 style="color:white;margin-left:5%;margin-top:2em;"> Video Gallery Uploads </h1> -->
+
 
 <style>
 

@@ -10,17 +10,17 @@ const session      = require('express-session');
 const passport    = require('passport');
 const multer       = require('multer');
 const upload = multer({ dest: 'uploads/' });
-const User = require('./models/user-model.js');
-
-
-// require('dotenv').config();
-
-require('./config/passport-config');
+// const User = require('./models/user-model.js');
 
 const app = express();
 
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost:27017/fixed-latinos', {useMongoClient: true});
+require('./config/passport-config');
+
+
+
+mongoose.connect(process.env.MONGODB_URI);
 
 
 app.listen(3005);

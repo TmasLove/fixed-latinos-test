@@ -2,25 +2,27 @@
 
 <h2> Sign Up </h2>
 
-<p class="signup"> Sign up to this awesome app. 🐙 </p>
+<p class="signup"> Sign up 🐙 </p>
 
 <% if (typeof messageForDumbUsers === 'string') { %>
   <p class="error-message"><%= messageForDumbUsers %></p>
 <% } %>
 
-<form id="form" method="post" action= /signup>
+<form id="signupform" method="post" action= /signup>
 <label for="username-input"> Username </label>
   <input  id="username-input" type="text" name="signupUserName"
       placeholder="Ninja">
-  <br>
+<br><br><br>
 
   <label for="password-input"> Password </label>
   <input  id="password-input" type="password" name="signupPassword"
-      placeholder="**********">
+      placeholder="********">
   <br>
-
+  <br>
   <button> Sign Up </button>
 </form>
+<br>
 
 <a href="/login"> Already part of the Squad? </a>
 </div>
+<br>
