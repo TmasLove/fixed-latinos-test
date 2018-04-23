@@ -12,7 +12,6 @@
         return 'ul[data-bsp-ul-id="'+clicked.ulId+'"][data-bsp-ul-index="'+clicked.ulIndex+'"]';
       }
       function generateId() {
-        //http://fiznool.com/blog/2014/11/16/short-id-generation-in-javascript/
         var ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         var ID_LENGTH = 4;
         var out = '';
@@ -48,49 +47,54 @@
     		}else{
     			$('a.previous').show()
     		}
-    	}
+      }
+
+      function getSrcfromStyle(istr){
+        // return istr.replace(/url\(\"/g,'').replace(/\"\)/g,'');  //**DOESNT WORK IN SAFARI/MAC https://github.com/michaelsoriano/bootstrap-photo-gallery/issues/17
+        return istr.replace('"','')
+                .replace("'",'')
+                .replace('"','')
+                .replace("'",'')
+                .replace('url(','')
+                .replace(')','');
+      }
+
       function showModal(){
 
-          var src = $(this).find('img').attr('src');
-          var largeImg = $(this).find('img').attr('data-bsp-large-src');
-          if(typeof largeImg === 'string'){
-                src = largeImg;
-          }
+          var bImgString = $(this).find('.bspImgWrapper')[0].style.backgroundImage;
+          var src = getSrcfromStyle(bImgString);
           var index = $(this).attr('data-bsp-li-index');
           var ulIndex = $(this).parent('ul').attr('data-bsp-ul-index');
           var ulId = $(this).parent('ul').attr('data-bsp-ul-id');
-          var theImg = $(this).find('img');
-          var pText = $(this).find('.text').html();        
+          var pText = $(this).find('p').html();
           var modalText = typeof pText !== 'undefined' ? pText : 'undefined';
-          var alt =  typeof theImg.attr('alt') == 'string' ? theImg.attr('alt') : null;
-          
+
+
           clicked.img = src;
           clicked.prevImg = parseInt(index) - parseInt(1);
       		clicked.nextImg = parseInt(index) + parseInt(1);
           clicked.ulIndex = ulIndex;
           clicked.ulId = ulId;
 
-
           $('#bsPhotoGalleryModal').modal();
 
           var html = '';
-          var img = '<img src="' + clicked.img + '" class="img-responsive"/>';
+          var img = '<img src="' + clicked.img + '" class="img-responsive bsp-modal-main-image"/>';
 
           html += img;
-          html += '<span class="' + settings.iconClose + ' bsp-close"></span>';
+          html += '<span class="bsp-close"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwb2x5Z29uIGZpbGw9IiMzNzM3MzciIHBvaW50cz0iMTIzLjU0Mjk2ODgsMTEuNTkzNzUgMTE2LjQ3NjU2MjUsNC41MTg1NTQ3IDY0LjAwMTk1MzEsNTYuOTMwNjY0MSAxMS41NTk1NzAzLDQuNDg4MjgxMyAgICAgNC40ODgyODEzLDExLjU1OTU3MDMgNTYuOTI3MjQ2MSw2My45OTcwNzAzIDQuNDU3MDMxMywxMTYuNDA1MjczNCAxMS41MjQ0MTQxLDEyMy40ODE0NDUzIDYzLjk5ODUzNTIsNzEuMDY4MzU5NCAgICAgMTE2LjQ0MjM4MjgsMTIzLjUxMTcxODggMTIzLjUxMjY5NTMsMTE2LjQ0MTQwNjMgNzEuMDczMjQyMiw2NC4wMDE5NTMxICAgIi8+PC9nPjwvc3ZnPg=="></span>';
           html += '<div class="bsp-text-container">';
-          
-          if(alt !== null){
-            html += '<h6>'+alt+'</h6>'
-          }
+
           if(typeof pText !== 'undefined'){
             html += '<p class="pText">'+pText+'</p>'
-          }        
+          }
           html += '</div>';
-        
+
 			    if(settings.showControl){
-            html += '<a class="bsp-controls next" data-bsp-id="'+clicked.ulId+'" href="'+ (clicked.nextImg) + '"><span class="' + settings.iconRight + '"></span></a>';
-            html += '<a class="bsp-controls previous" data-bsp-id="'+clicked.ulId+'" href="' + (clicked.prevImg) + '"><span class="' + settings.iconLeft + '"></span></a>';
+            html += '<a class="bsp-controls next" data-bsp-id="'+clicked.ulId+'" href="'+ (clicked.nextImg) + '">';
+            html += '<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMjk4LjMsMjU2TDI5OC4zLDI1NkwyOTguMywyNTZMMTMxLjEsODEuOWMtNC4yLTQuMy00LjEtMTEuNCwwLjItMTUuOGwyOS45LTMwLjZjNC4zLTQuNCwxMS4zLTQuNSwxNS41LTAuMmwyMDQuMiwyMTIuNyAgYzIuMiwyLjIsMy4yLDUuMiwzLDguMWMwLjEsMy0wLjksNS45LTMsOC4xTDE3Ni43LDQ3Ni44Yy00LjIsNC4zLTExLjIsNC4yLTE1LjUtMC4yTDEzMS4zLDQ0NmMtNC4zLTQuNC00LjQtMTEuNS0wLjItMTUuOCAgTDI5OC4zLDI1NnoiLz48L3N2Zz4="/></a>';
+            html += '<a class="bsp-controls previous" data-bsp-id="'+clicked.ulId+'" href="' + (clicked.prevImg) + '">';
+            html += '<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBwb2ludHM9IjM1MiwxMjguNCAzMTkuNyw5NiAxNjAsMjU2IDE2MCwyNTYgMTYwLDI1NiAzMTkuNyw0MTYgMzUyLDM4My42IDIyNC43LDI1NiAiLz48L3N2Zz4="/></a></a>';
           }
           $('#bsPhotoGalleryModal .modal-body').html(html);
           $('.bsp-close').on('click', closeModal);
@@ -106,27 +110,18 @@
           var ul = $(getCurrentUl());
           var index = $(this).attr('href');
 
-          var src = ul.find('li[data-bsp-li-index="'+index+'"] img').attr('src');
-          var largeImg = ul.find('li[data-bsp-li-index="'+index+'"] img').attr('data-bsp-large-src');
-          if(typeof largeImg === 'string'){
-                src = largeImg;
-          } 
-          
-          var pText = ul.find('li[data-bsp-li-index="'+index+'"] .text').html();        
+          var istr = ul.find('li[data-bsp-li-index="'+index+'"] .bspImgWrapper')[0].style.backgroundImage;
+          var src = getSrcfromStyle(istr);
+          var pText = ul.find('li[data-bsp-li-index="'+index+'"] p').html();
           var modalText = typeof pText !== 'undefined' ? pText : 'undefined';
-          var theImg = ul.find('li[data-bsp-li-index="'+index+'"] img');
-          var alt =  typeof theImg.attr('alt') == 'string' ? theImg.attr('alt') : null;
-           
-          $('#bsPhotoGalleryModal .modal-body img').attr('src', src);
+
+
+          $('#bsPhotoGalleryModal .modal-body img.bsp-modal-main-image').attr('src', src);
           var txt = '';
-          if(alt !== null){
-            txt += '<h6>'+alt+'</h6>'
-          }
           if(typeof pText !== 'undefined'){
             txt += '<p class="pText">'+pText+'</p>'
-          }        
-          
-          $('.bsp-text-container').html(txt); 
+          }
+          $('.bsp-text-container').html(txt);
 
           clicked.prevImg = parseInt(index) - 1;
           clicked.nextImg = parseInt(clicked.prevImg) + 2;
@@ -138,7 +133,7 @@
               $(this).attr('href', clicked.nextImg);
               $('a.previous').attr('href', clicked.prevImg);
           }
-          // console.log(clicked);
+
         showHideControls();
         return false;
       }
@@ -146,122 +141,9 @@
         $('#bsPhotoGalleryModal .modal-body').html('');
         clicked = {};
       }
-      function insertClearFix(el,x){
-        var index = (x+1);
-        $.each(classesArray,function(e){
-           switch(classesArray[e]){
-             //large
-             case "col-lg-1":
-                  if($(el).next('li.clearfix').length == 0){
-                    $(el).after('<li class="clearfix visible-lg-block"></li>');
-                  }
-              break;
-             case "col-lg-2":
-                if(index%6 === 0){
-                  $(el).after('<li class="clearfix visible-lg-block"></li>');
-                }
-              break;
-             case "col-lg-3":
-              if(index%4 === 0){
-                $(el).after('<li class="clearfix visible-lg-block"></li>');
-              }
-             break;
-             case "col-lg-4":
-              if(index%3 === 0){
-                $(el).after('<li class="clearfix visible-lg-block"></li>');
-              }
-             break;
-             case "col-lg-5":
-             case "col-lg-6":
-              if(index%2 === 0){
-                $(el).after('<li class="clearfix visible-lg-block"></li>');
-              }
-             break;
-             //medium
-             case "col-md-1":
-                  if($(el).next('li.clearfix').length == 0){
-                    $(el).after('<li class="clearfix visible-md-block"></li>');
-                  }
-              break;
-             case "col-md-2":
-                if(index%6 === 0){
-                  $(el).after('<li class="clearfix visible-md-block"></li>');
-                }
-              break;
-             case "col-md-3":
-              if(index%4 === 0){
-                $(el).after('<li class="clearfix visible-md-block"></li>');
-              }
-             break;
-             case "col-md-4":
-              if(index%3 === 0){
-                $(el).after('<li class="clearfix visible-md-block"></li>');
-              }
-             break;
-             case "col-md-5":
-             case "col-md-6":
-              if(index%2 === 0){
-                $(el).after('<li class="clearfix visible-md-block"></li>');
-              }
-             break;
-             //small
-             case "col-sm-1":
-                  if($(el).next('li.clearfix').length == 0){
-                    $(el).after('<li class="clearfix visible-sm-block"></li>');
-                  }
-              break;
-             case "col-sm-2":
-                if(index%6 === 0){
-                  $(el).after('<li class="clearfix visible-sm-block"></li>');
-                }
-              break;
-             case "col-sm-3":
-              if(index%4 === 0){
-                $(el).after('<li class="clearfix visible-sm-block"></li>');
-              }
-             break;
-             case "col-sm-4":
-              if(index%3 === 0){
-                $(el).after('<li class="clearfix visible-sm-block"></li>');
-              }
-             break;
-             case "col-sm-5":
-             case "col-sm-6":
-              if(index%2 === 0){
-                $(el).after('<li class="clearfix visible-sm-block"></li>');
-              }
-             break;
-             //x-small
-             case "col-xs-1":
-                  if($(el).next('li.clearfix').length == 0){
-                    $(el).after('<li class="clearfix visible-xs-block"></li>');
-                  }
-              break;
-             case "col-xs-2":
-                if(index%6 === 0){
-                  $(el).after('<li class="clearfix visible-xs-block"></li>');
-                }
-              break;
-             case "col-xs-3":
-              if(index%4 === 0){
-                $(el).after('<li class="clearfix visible-xs-block"></li>');
-              }
-             break;
-             case "col-xs-4":
-              if(index%3 === 0){
-                $(el).after('<li class="clearfix visible-xs-block"></li>');
-              }
-             break;
-             case "col-xs-5":
-             case "col-xs-6":
-              if(index%2 === 0){
-                $(el).after('<li class="clearfix visible-xs-block"></li>');
-              }
-             break;
-           }
-        });
-      }
 
+
+      //START OF LOGIC//
 
       this.each(function(i){
         //ul
@@ -270,14 +152,23 @@
         $(this).attr('data-bsp-ul-index', i);
 
         items.each(function(x){
-          var theImg = $(this).find('img'); 
-          insertClearFix(this,x);
+          var theImg = $(this).find('img');
+          var theText = $(this).find('p');
+          var src = theImg.attr('src');
+
           $(this).addClass(classesString);
           $(this).attr('data-bsp-li-index', x);
-          theImg.addClass('img-responsive');
-          if(settings.fullHeight){
-            theImg.wrap('<div class="imgWrapper"></div>')
+
+
+          theImg.wrap('<div class="bspImgWrapper" style="background:url(\''+src+'\');"></div>');
+          theText.addClass('bspText');
+
+          if(settings.shortText === true){
+            theText.addClass('bspShortText');
           }
+
+          theImg.remove();
+
           if(settings.hasModal === true){
             $(this).addClass('bspHasModal');
             $(this).on('click', showModal);
@@ -297,13 +188,10 @@
   };
   /*defaults*/
   $.fn.bsPhotoGallery.defaults = {
-    'classes' : 'col-lg-2 col-md-2 col-sm-3 col-xs-4',
+    'classes' : 'col-xl-2 col-lg-2 col-md-2 col-sm-4',
     'showControl' : true,
-    'hasModal' : true, 
-    'fullHeight' : true,
-    'iconClose' : 'glyphicon glyphicon-remove-circle',
-    'iconLeft' : 'glyphicon glyphicon-chevron-left',
-    'iconRight' : 'glyphicon glyphicon-chevron-right'
+    'hasModal' : true,
+    'shortText' : true
   }
 
 

@@ -1,25 +1,28 @@
 <link rel="stylesheet" href="/css/style.css">
-
+<!-- bootstrap4 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <link rel="stylesheet" href="css/jquery.bsPhotoGallery.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/jquery.bsPhotoGallery.js"></script>
-</script>
-
-
+<script src="js/gulpfile.js"></script>
 
 
 <script>
+$('ul.first').bsPhotoGallery();
+
   $(document).ready(function() {
-    $('ul.first').bsPhotoGallery({
-      "classes": "col-lg-2 col-md-4 col-sm-3 col-xs-4 col-xxs-12",
+    opts = {
+      "classes": "col-lg-2 col-md-4 col-sm-3 col-xs-12",
       "hasModal": true,
-      // "fullHeight" : false
-    });
+      "showControl": true,
+      "shortText": false,
+    }
+    $('ul.first').bsPhotoGallery(opts);
   });
 </script>
+
 <style>
   @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
@@ -91,91 +94,82 @@
       <div class="text">Sexy cockpit view.</div>
     </li>
 
+
     <li class="all">
-      <img alt="Jump over" src="http://demo.michaelsoriano.com/images/<photodune-2360571-jump-xs class=""></photodune-2360571-jump-xs>g">
+      <img alt="Spaghetti bitch" src="http://demo.michaelsoriano.com/images/photodune-2441670-spaghetti-with-tuna-fish-and-parsley-s.jpg">
       <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
     </li>
 
     <li class="all">
-      <img alt="Culture business" src="http://demo.michaelsoriano.com/images/<<<phot</phot>odune></photodune>-2361384-culture-for-business-xs class=""></photodune-2361384-culture-for-business-xs>jpg">
+      <img alt="Budget this" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
       <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
     </li>
 
-        <li class="all">
-          <img alt="Spaghetti bitch" src="http://demo.michaelsoriano.com/images/photodune-2441670-spaghetti-with-tuna-fish-and-parsley-s.jpg">
-          <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-        </li>
-
-        <li class="all">
-          <img alt="Budget this" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
-          <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-        </li>
-
-        <li class="all">
-          <img alt="Street art" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
-          <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Street art" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
+      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
+    </li>
 
 
-        <li class="all">
-          <img alt="Insurance and stuff" src="http://demo.michaelsoriano.com/images/photodune-3552322-insurance-xs.jpg">
-          <div class="text">Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Insurance and stuff" src="http://demo.michaelsoriano.com/images/photodune-3552322-insurance-xs.jpg">
+      <div class="text">Ut enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="Food Explosion" src="http://demo.michaelsoriano.com/images/photodune-3807845-food-s.jpg">
-          <div class="text">Eiusmod tempor enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Food Explosion" src="http://demo.michaelsoriano.com/images/photodune-3807845-food-s.jpg">
+      <div class="text">Eiusmod tempor enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="Office worker sad" src="http://demo.michaelsoriano.com/images/photodune-3835655-down-office-worker-xs.jpg">
-          <div class="text">Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Office worker sad" src="http://demo.michaelsoriano.com/images/photodune-3835655-down-office-worker-xs.jpg">
+      <div class="text">Ut enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="" src="http://demo.michaelsoriano.com/images/photodune-4619216-ui-control-knob-regulators-xs.jpg">
-          <div class="text">Do eiusmod tempor</div>
-        </li>
+    <li class="all">
+      <img alt="" src="http://demo.michaelsoriano.com/images/photodune-4619216-ui-control-knob-regulators-xs.jpg">
+      <div class="text">Do eiusmod tempor</div>
+    </li>
 
-        <li class="all">
-          <img alt="Health" src="http://demo.michaelsoriano.com/images/photodune-5771958-health-xs.jpg">
-          <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Health" src="http://demo.michaelsoriano.com/images/photodune-5771958-health-xs.jpg">
+      <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="Constant consecutuir" src="http://demo.michaelsoriano.com/images/photodune-268693-businesswoman-using-laptop-outdoors-xs.jpg">
-          <!--no alt tag-->
-          <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Constant consecutuir" src="http://demo.michaelsoriano.com/images/photodune-268693-businesswoman-using-laptop-outdoors-xs.jpg">
+      <!--no alt tag-->
+      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="Search code" src="http://demo.michaelsoriano.com/images/photodune-352207-search-of-code-s.jpg">
-          <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-        </li>
+    <li class="all">
+      <img alt="Search code" src="http://demo.michaelsoriano.com/images/photodune-352207-search-of-code-s.jpg">
+      <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+    </li>
 
-        <li class="all">
-          <img alt="Pountac" src="http://demo.michaelsoriano.com/images/photodune-247190-secret-email-xs.jpg">
-          <!--no alt tag, no text-->
-          <div class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
-        </li>
-        <li class="all">
-          <img alt="Budget again" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
-          <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-        </li>
-        <li class="all">
-          <img alt="Some alt tag" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
-          <!--no alt-->
-          <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-        </li>
-        <li class="all">
-          <img alt="Sweet Miami Beach" src="images/bikes/mb.jpg">
-          <div class="text">Sexy MiamiBeach Picture</div>
-        </li>
+    <li class="all">
+      <img alt="Pountac" src="http://demo.michaelsoriano.com/images/photodune-247190-secret-email-xs.jpg">
+      <!--no alt tag, no text-->
+      <div class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
+    </li>
+    <li class="all">
+      <img alt="Budget again" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
+      <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+    </li>
+    <li class="all">
+      <img alt="Some alt tag" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
+      <!--no alt-->
+      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
+    </li>
+    <li class="all">
+      <img alt="Sweet Miami Beach" src="images/bikes/mb.jpg">
+      <div class="text">Sexy MiamiBeach Picture</div>
+    </li>
 
 
 
 
-<!-- bikes starts here -->
+    <!-- bikes starts here -->
 
     <li class="bikes all">
       <img alt="David's Bike" src="images/bikes/david.jpg">
@@ -205,14 +199,14 @@
     </li>
 
 
-<!-- events starts here -->
+    <!-- events starts here -->
 
 
 
 
 
 
-<!-- homies starts here -->
+    <!-- homies starts here -->
     <li class="homies all">
       <img alt="Insurance boy" src="http://demo.michaelsoriano.com/images/photodune-3552322-insurance-xs.jpg">
       <div class="text">Ut enim ad minim veniam</div>
