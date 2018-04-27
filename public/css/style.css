@@ -1061,7 +1061,7 @@ margin-top: 1em;
   box-sizing: border-box;
 }
 
-header {
+.wrapper header {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -1372,8 +1372,41 @@ section select {
 }
 
 
+.wrapper .members-footer ul {
+margin: 0;
+margin-top: 30px;
+display: flex;
+list-style: none;
+padding: 0;
+}
+
+.wrapper .members-footer ul li {
+    flex: 1;
+}
+
+.wrapper footer li:first-child {
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+}
+
+.wrapper .members-footer li:first-child span {
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  color: #999;
+}
 
 
+.wrapper footer li:last-child {
+    text-align: right;
+}
+
+.wrapper .members-footer li:last-child span {
+background-color: #22A4E6;
+padding: 10px 20px;
+color: #fff;
+border-radius: 3px;
+}
 
 /* ENDS DROP ZONE */
 /* MEMBERS VIEW ENDS HERE */

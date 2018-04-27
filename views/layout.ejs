@@ -14,29 +14,30 @@
   <header>
 
     <!-- navbar starts here -->
-      <nav>
-        <a class="navbar-brand" href="/">Fixed Latinos</a>
+    <nav>
+      <a class="navbar-brand" href="/">Fixed Latinos</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/squad">Squad</a></li>
+        <li><a href="/film">Film</a>
+          <ol>
+            <li class="pg"><a href="/photo-gallery">Gallery</a></li>
 
-        <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/squad">Squad</a></li>
-                  <li><a href="/film">Film</a>
-                      <ol>
-                          <li class="pg"><a href="/photo-gallery">Gallery</a></li>
+          </ol>
+          <% if (typeof currentUser === 'object') { %>
+            <li><a href="/members">Members</a></li>
+            <%  } else { %>
+              <li><a href="/login">Login</a></li>
+              <%  } %>
+        </li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
 
-                      </ol>
-                  <% if (typeof currentUser === 'object') { %>
-                    <li><a href="/members">Members</a></li>
-                  <%  } else { %>
-                    <li><a href="/login">Login</a></li>
-                    <%  } %>
-                  </li>
-                  <!-- <li><a href="/shop">Shop</a></li> -->
-            </ul>
+        <!-- <li><a href="/shop">Shop</a></li> -->
+      </ul>
     </nav>
 
-</header>
+  </header>
 
 
   <%- body %>
@@ -51,14 +52,10 @@
 
 
     <p class="footer-links">
-      <a href="/">Home</a>
-      ·
-      <a href="/about">About</a>
-      ·
-      <a href="/squad">Squad</a>
-      ·
-      <a href="/film">Film</a>
-      ·
+      <a href="/">Home</a> ·
+      <a href="/about">About</a> ·
+      <a href="/squad">Squad</a> ·
+      <a href="/film">Film</a> ·
       <a href="/photo-gallery">Gallery</a>
 
       <!-- <a href="/shop">Shop</a> -->
@@ -82,9 +79,11 @@
 
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edcec2c0ddccc3d483cec2c0">
-        <!-- <span class="__cf_email__" data-cfemail="14676164647b666054777b7964757a6d3a777b79">[email&#160;protected]</span> -->
-        hi@FixedLatinos.com</a></p>
+      <p>
+        <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edcec2c0ddccc3d483cec2c0">
+          <!-- <span class="__cf_email__" data-cfemail="14676164647b666054777b7964757a6d3a777b79">[email&#160;protected]</span> -->
+          hi@FixedLatinos.com</a>
+      </p>
     </div>
 
   </div>
@@ -92,8 +91,7 @@
   <div class="footer-right">
 
     <p class="footer-company-about">
-      <span>About Fixed Latinos</span>
-      A Latino squad of dedicated Fixed gear riders who shred the streets of Miami. #NoBrakesNoWorries
+      <span>About Fixed Latinos</span> A Latino squad of dedicated Fixed gear riders who shred the streets of Miami. #NoBrakesNoWorries
     </p>
 
     <div class="footer-icons">

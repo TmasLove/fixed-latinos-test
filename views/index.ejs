@@ -1,80 +1,84 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-        .bs-example{
-        	margin: 20px;
-        }
-        .modal-content iframe{
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- Jumbotron that will be a carousel -->
-<section>
-<div class="jumbotron">
-  <h1 class="display-3" style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">Fixed Latinos</h1>
-  <p class="lead" style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">Gnarliest Fixed Squad</p>
-  <hr class="my-4">
-  <p style="font-family:'Permanent Marker', cursive; font-size:30px;">Shredding the streets of Miami, FL.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a>
-  </p>
-</div>
-</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .bs-example {
+      margin: 20px;
+    }
 
+    .modal-content iframe {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
 
+<body>
 
-
-
-
-
+  <!-- Jumbotron that will be a carousel -->
+  <section>
+    <div class="jumbotron">
+      <h1 class="display-3" style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">Fixed Latinos</h1>
+      <p class="lead" style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">Gnarliest Fixed Squad</p>
+      <hr class="my-4">
+      <p style="font-family:'Permanent Marker', cursive; font-size:30px;">Shredding the streets of Miami, FL.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a>
+      </p>
+    </div>
+  </section>
 
 
-<!------ Video section ------------>
 
 
-<section id="video-sec" class="parallax">
-  <div class="overlay"></div>
+
+
+
+
+
+  <!------ Video section ------------>
+
+
+  <section id="video-sec" class="parallax">
+    <div class="overlay"></div>
     <div class="container">
       <div class="row">
-          <div class="col-md-offset-2 col-md-8 col-sm-12" style="padding-bottom: 50px;">
-              <h2 class="wow fadeInUp">Watch the Favorited video<small>KevinB305 Movie.</small></h2>
-              <a data-toggle="modal" href="#myModal"><i class="fa fa-play"></i></a>
-              <small><em>Video by: KevinB | 305</em></small>
-          </div>
-      </div
-    </div>
-  </div>
-
-  <!-- Modal HTML -->
-    <div class="bs-example">
-        <div id="myModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-                        <h4 class="modal-title"><span style="color:salmon;font-weight:bold">Favorited Video</span></h4>
-                    </div>
-                    <div class="modal-body">
-                        <iframe id="cartoonVideo" width="660" height="515" src="https://www.youtube.com/embed/1XVURDgQcjg" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-offset-2 col-md-8 col-sm-12" style="padding-bottom: 50px;">
+          <h2 class="wow fadeInUp">Watch the Favorited video<small>KevinB305 Movie.</small></h2>
+          <a data-toggle="modal" href="#myModal"><i class="fa fa-play"></i></a>
+          <small><em>Video by: KevinB | 305</em></small>
         </div>
+      </div </div>
     </div>
-</section>
+
+    <!-- Modal HTML -->
+    <div class="bs-example">
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
+              <h4 class="modal-title"><span style="color:salmon;font-weight:bold">Favorited Video</span></h4>
+            </div>
+            <div class="modal-body">
+              <iframe id="cartoonVideo" width="660" height="515" src="https://www.youtube.com/embed/1XVURDgQcjg" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -83,93 +87,92 @@
 
 
 
-<!-- services -->
-<section class="serv">
-	<div class="services">
-		<div class="container">
-			<div class="w3layouts-services-heading">
-				<h2><span style="color:#00bfff; font-weight: bold; font-family: cursive;">Our</span> <span style="color:black;">Services</span></h2>
-			</div>
-			<div class="w3-services-grids">
+  <!-- services -->
+  <section class="serv">
+    <div class="services">
+      <div class="container">
+        <div class="w3layouts-services-heading">
+          <h2><span style="color:#00bfff; font-weight: bold; font-family: cursive;">Our</span> <span style="color:black;">Services</span></h2>
+        </div>
+        <div class="w3-services-grids">
 
-        <div class="col-md-3 w3l-services-grid">
-					<div class="w3ls-services-img">
-						<i class="fa fa-wrench" aria-hidden="true"></i>
-					</div>
-					<div class="agileits-services-info">
-						<h4>Bike Shops</h4>
-						<p> Some of the Bike Shops we recommend </p>
-            <ul style="text-align:left;">
-              <li> Brickell Bikes </li>
-              <li> Mack Cycles </li>
-              <li> South Miami Bike Shop </li>
-            </ul>
-					</div>
-				</div>
+          <div class="col-md-3 w3l-services-grid">
+            <div class="w3ls-services-img">
+              <i class="fa fa-wrench" aria-hidden="true"></i>
+            </div>
+            <div class="agileits-services-info">
+              <h4>Bike Shops</h4>
+              <p> Some of the Bike Shops we recommend </p>
+              <ul style="text-align:left;">
+                <li> Brickell Bikes </li>
+                <li> Mack Cycles </li>
+                <li> South Miami Bike Shop </li>
+              </ul>
+            </div>
+          </div>
 
-        <div class="col-md-3 w3l-services-grid">
-					<div class="w3ls-services-img">
-						<i class="fa fa-bicycle" aria-hidden="true"></i>
-					</div>
-					<div class="agileits-services-info">
-						<h4>Weekly Rides</h4>
-            <p> Ride with Us </p>
-            <ul style="text-align:left;">
-              <li><strong>Monday:</strong> Monday Night Mash </li>
-              <!-- <li><strong>Tuesday:</strong> Taco Tuesday </li> -->
-              <li><strong>Wedsnesday:</strong> Fyxd305 </li>
-              <!-- <li><strong>Thursday:</strong> Rest </li> -->
-            </ul>
-					</div>
-				</div>
+          <div class="col-md-3 w3l-services-grid">
+            <div class="w3ls-services-img">
+              <i class="fa fa-bicycle" aria-hidden="true"></i>
+            </div>
+            <div class="agileits-services-info">
+              <h4>Weekly Rides</h4>
+              <p> Ride with Us </p>
+              <ul style="text-align:left;">
+                <li><strong>Monday:</strong> Monday Night Mash </li>
+                <!-- <li><strong>Tuesday:</strong> Taco Tuesday </li> -->
+                <li><strong>Wedsnesday:</strong> Fyxd305 </li>
+                <!-- <li><strong>Thursday:</strong> Rest </li> -->
+              </ul>
+            </div>
+          </div>
 
-        <div class="col-md-3 w3l-services-grid">
-					<div class="w3ls-services-img">
-						<i class="fa fa-angle-double-down" aria-hidden="true"></i>
-					</div>
-					<div class="agileits-services-info">
-						<h4>Service Questions?</h4>
-						<p> Send us an e-Mail. Quick response. </p>
-					</div>
-				</div>
+          <div class="col-md-3 w3l-services-grid">
+            <div class="w3ls-services-img">
+              <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+            </div>
+            <div class="agileits-services-info">
+              <h4>Service Questions?</h4>
+              <p> Send us an e-Mail. Quick response. </p>
+            </div>
+          </div>
 
-        <div class="col-md-3 w3l-services-grid">
-					<div class="w3ls-services-img">
-						<i class="fa fa-cog" aria-hidden="true"></i>
-					</div>
-					<div class="agileits-services-info">
-						<h4>Sponsors</h4>
-            <p> Interested? Send us a Message :) </p>
-            <ul style="text-align:center;">
-              <li>...</li>
-              <li>...</li>
-              <li>...</li>
-            </ul>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-</section>
+          <div class="col-md-3 w3l-services-grid">
+            <div class="w3ls-services-img">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </div>
+            <div class="agileits-services-info">
+              <h4>Sponsors</h4>
+              <p> Interested? Send us a Message :) </p>
+              <ul style="text-align:center;">
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+    @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 
-  @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
-  @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 
-
-    body  {
-       background-image: url("images/sativa.png") !important;
-       }
-</style>
-
+    body {
+      background-image: url("images/sativa.png") !important;
+    }
+  </style>
 
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 
 
@@ -177,21 +180,21 @@
 </html>
 </body>
 <script type="text/javascript">
-$(document).ready(function(){
+  $(document).ready(function() {
     /* Get iframe src attribute value i.e. YouTube video url
     and store it in a variable */
     var url = $("#cartoonVideo").attr('src');
 
     /* Assign empty url value to the iframe src attribute when
     modal hide, which stop the video playing */
-    $("#myModal").on('hide.bs.modal', function(){
-        $("#cartoonVideo").attr('src', '');
+    $("#myModal").on('hide.bs.modal', function() {
+      $("#cartoonVideo").attr('src', '');
     });
 
     /* Assign the initially stored url back to the iframe src
     attribute when modal is displayed again */
-    $("#myModal").on('show.bs.modal', function(){
-        $("#cartoonVideo").attr('src', url);
+    $("#myModal").on('show.bs.modal', function() {
+      $("#cartoonVideo").attr('src', url);
     });
-});
+  });
 </script>
