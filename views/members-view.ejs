@@ -27,62 +27,71 @@
 <h1 style="color:white;text-align:center;;margin-top:2em;"> Control Pannel </h1>
 
 
-<div class="wrapper">
-  <header>
-    <h1 style="text-align:center;">Upload Photo</h1>
-    <span>ID: FixedLatino</span>
-  </header>
+<!-- <form action="http://localhost:3005/members" method="post" > -->
+<form action="/members"  method="POST" enctype="multipart/form-data">
+  <label for="first-name-input">First Name:</label>
+  <input id="first-name-input" type="text" name="username">
+  <input type="file" name="file">
+  <input type="submit" value="Upload Image" >
+</form>
 
-  <div class="ways">
-    <ul>
-      <li class="active">
-        photo
-      </li>
-      <li>
-        video
-      </li>
-    </ul>
-  </div>
+<!-- <div class="wrapper">
+    <header>
+      <h1 style="text-align:center;">Upload Photo</h1>
+      <span>ID: FixedLatino</span>
+    </header>
 
-  <div class="sections">
+    <div class="ways">
+      <ul>
+        <li class="active">
+          photo
+        </li>
+        <li>
+          video
+        </li>
+      </ul>
+    </div>
 
-    <section class="active">
-      <input type="text" placeholder="Title" id="title"/>
-      <select id="category">
-        <option value="all">All</option>
-        <option value="bikes">Bikes</option>
-        <option value="events">Events</option>
-        <option value="homies">Homies</option>
-      </select>
+    <div class="sections">
 
-      <div class="select-option">
-        <div class="head">Category</div>
-        <div class="option"></div>
-      </div>
+      <section class="active">
+        <input type="text" placeholder="Title" id="title"/>
+        <select id="category">
+          <option value="all">All</option>
+          <option value="bikes">Bikes</option>
+          <option value="events">Events</option>
+          <option value="homies">Homies</option>
+        </select>
 
-
-      <div class="images">
-        <div class="pic">
-          add
+        <div class="select-option">
+          <div class="head">Category</div>
+          <div class="option"></div>
         </div>
-      </div>
 
 
-    </section>
+        <div class="images">
+          <div class="pic">
+            add
+          </div>
+        </div>
 
-    <section>
-      <input type="text" placeholder="Topic" id="topic"/>
-      <textarea placeholder="something..." id="msg"></textarea>
-    </section>
 
-  </div>
+      </section>
 
-  <div class="members-footer">
-    <ul>
-      <li><span id="reset">Reset</span></li>
-      <li><span id="send">Send</span></li>
-    </ul>
-  </div>
+      <section>
+        <input type="text" placeholder="Topic" id="topic"/>
+        <textarea placeholder="something..." id="msg"></textarea>
+      </section>
+
+    </div>
+
+    <div class="members-footer">
+      <ul>
+        <li><span id="reset">Reset</span></li>
+        <li><span id="send">Send</span></li>
+      </ul>
+    </div>
+</div> -->
 
 <div class="notification"></div>
 

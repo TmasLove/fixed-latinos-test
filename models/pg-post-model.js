@@ -6,7 +6,7 @@ const myPostSchema = new Schema (
   {
     image: { data: Buffer, contentType: String},
     username: {type: String},
-    image_path: {type: String}
+    // image_path: {type: String}
   },
   {
     timestamp: true

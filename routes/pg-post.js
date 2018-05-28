@@ -1,20 +1,34 @@
 const express = require('express');
 const router = express.Router();
-const models = require('../models/pg-post-model.js');
+const Post = require('../models/pg-post-model.js');
+const multer = require('multer');
+const upload = require('../config/multer.js');
 
 
-router.post('/members', (req, res, next) => {
-    const myPost = new models ({
-      username: req.user.username,
-      image_path: req.body.imageData
+// var uploading = multer({
+//   dest: __dirname + './uploads/',
+//   limits: {fileSize: 1000000, files:1},
+// });
+
+
+router.post('/members', upload.single('file') , (req, res, next) => {
+  console.log('TEST =>>>>>>>');
+    const myPost = new Post ({
+      username: req.body.username,
+      image: `/uploads/${req.file.file}`,
     });
 
-    myPost.save((err) => {
+    console.log(myPost);
 
+    myPost.save((err) => {
       if (err) {
-        next(err);
-        return;
+          res.json(err);
+          return;
       }
+      res.json({
+      message: 'New Post created!',
+      id: myPost._id
+    });
 
       res.redirect('/login');
     });
