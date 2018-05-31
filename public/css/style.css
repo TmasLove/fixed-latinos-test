@@ -5,12 +5,12 @@ body {
 }
 
 /*navbar starts here*/
-nav {
+nav{
     display: table;
     border-bottom: 1px solid #00bfff;
     background-color: #333;
     padding-bottom: 1.45em !important;
-    padding-top: 0.5em;
+    padding-top: 1em;
 }
 
 .navbar-brand {
@@ -98,7 +98,7 @@ nav ul ol li {
 nav ul li:hover > ol {
 	display: block;
 }
-/*.navbar {
+.navbar {
   position: fixed !important;
   top: 0;
   left: 0;
@@ -161,7 +161,7 @@ color: white;
   padding: 20px 10px;
   background-color: #00bfff !important;
   color: black !important;
-}*/
+}
 /*navbar ends here*/
 
 
@@ -169,10 +169,29 @@ color: white;
 /*index starts here*/
 .jumbotron {
   width: 100%;
-  text-align: center;
-  background-image: ur('/images/logo.jpg') !important;
+  /*fix logo*/
+  /* background: ur('/images/logo.jpg'); */
+  background-position: center center;
+  background-size: contain;
   margin-top: 10px;
   margin-bottom: -30px !important;
+  padding-top: 3em !important;
+  padding-bottom: 5em !important;
+  color: white;
+
+}
+
+
+.square {
+  width: 50%;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  color: black;
+  position: relative;
+  left: 25%;
 }
 
 
@@ -183,7 +202,7 @@ color: white;
   background-size: cover;
   background-position: center center;
     text-align: center;
-  position: relative;
+    position: relative;
     color: #fff;
 }
 
@@ -1417,6 +1436,12 @@ border-radius: 3px;
 .container2 {
   margin-top: 5%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  position: relative;
+  left: 37%;
+  padding-top: 2em;
+  border-radius: 5px;
 }
 
 #loginform {

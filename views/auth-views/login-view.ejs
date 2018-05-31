@@ -11,14 +11,14 @@
 
 <div class="container2">
 
-<h2 style="font-family:'Permanent Marker', cursive; margin-bottom:30px;color:white;"> Log In homie </h2>
+<h2 style="font-family:'Permanent Marker', cursive; margin-bottom:30px;color:salmon;"> Log In</h2>
 
 <form id="loginform" method="post" action="/login">
-  <label for="username-input"> Username: </label>
+  <label for="username-input"></label>  <span><i aria-hidden="true" class="fa fa-user"></i></span>
   <input id="username-input" type="text" name="loginUsername" placeholder="Ninja">
   <br>
-
-  <label for="password-input"> Password: </label>
+  <br>
+  <label for="password-input"></label> <span><i aria-hidden="true" class="fa fa-key"></i></span>
   <input id="password-input" type="password" name="loginPassword" placeholder="******">
   <br>
 
@@ -28,11 +28,21 @@
 </div>
 
 
+
+
+
+
+
 <style type="text/css">
 
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 @import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 
+body {
+  background-image: url("images/sativa.png") !important;
+}
 
-
+footer {
+  margin-top: 5em;
+}
 </style>
