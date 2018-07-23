@@ -11,29 +11,64 @@ const upload = require('../config/multer.js');
 // });
 
 
+
+
+router.get('/photo-gallery', (req, res, next) => {
+  Post.find((err, postResults) => {
+    if(err) {
+      next(err);
+      return;
+    }
+    res.render('photo-gallery.ejs', {
+      postsAndStuff: postResults
+    });
+  });
+});
+
+
+router.get('/feed', (req, res, next) => {
+
+  Post.find((err, postResults) => {
+    if(err) {
+      next(err);
+      return;
+    }
+
+
+  });
+});
+
+
+
+
 router.post('/members', upload.single('file') , (req, res, next) => {
-  console.log('TEST =>>>>>>>');
+  // console.log('TEST =>>>>>>>');
+  // console.log(req.file);
     const myPost = new Post ({
-      username: req.body.username,
-      image: `/uploads/${req.file.file}`,
+      username: req.user.username,
+      // image: `/uploads/${req.file.filename}`,
+      image_path: "/"+req.file.path
     });
 
-    console.log(myPost);
+    // console.log(myPost);
 
     myPost.save((err) => {
       if (err) {
           res.json(err);
           return;
       }
-      res.json({
-      message: 'New Post created!',
-      id: myPost._id
-    });
+    //   res.json({
+    //   message: 'New Post created!',
+    //   id: myPost._id
+    // });
 
-      res.redirect('/login');
+    console.log(`New post created: ${myPost}`);
+    res.redirect('/login');
     });
-
 });
+
+
+
 
 
 

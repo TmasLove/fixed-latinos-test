@@ -1,57 +1,49 @@
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/style.css">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<style type="text/css">
-  .bs-example2 {
-    margin: 20px;
-  }
-
-  .modal-content2 iframe {
-    margin: 0 auto;
-    display: block;
-  }
-</style>
 
 
+<script type="text/javascript">
+$('#filmVideo').on('hidden.bs.modal', function () {
+    $("#filmVideo iframe").attr("src", $("#filmVideo iframe").attr("src"));
+});
+</script>
 
-
-<div class="film-header">
-  <h2 style="font-family:'Permanent Marker', cursive; font-size:30px;"> Enjoy some of our Videos! </h2>
+<div class="x-bg">
+  <h1 class="x-txt"> Video Gallery </h1>
 </div>
 
 
 
-<div style="clear:both;"></div>
-<div id="portfolio">
 
 
-
-
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-canons">
-      <img src="images/video4-cover.png" alt="4">
-    </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-canons" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+<div class="card-deck" style="margin-top:2em;">
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/video4-cover.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Canones Suletos (8th ST)</h5>
+        <p class="card-text">Street Race - Point A to B</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video4" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video4" tabindex="-1" role="dialog" aria-labelledby="video4Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-            <h4 class="modal-title">Canones Suletos (8th ST)</h4>
-            <ul style="text-align:center;">
-              <li> Driver: Panda </li>
-              <li> Edited By: Anwar </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video4Label">Driver: Panda</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="filmVideo" width="660" height="515" src="https://www.youtube.com/embed/D3a5WyWncSk" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
@@ -60,26 +52,27 @@
   </div>
 
 
-
-
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-raven">
-        <img src="images/video1-cover.png" alt="1" />
-      </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-raven" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/video1-cover.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ultra CAT (03/2017)</h5>
+        <p class="card-text">Ultra Weekend Race</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video1" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video1" tabindex="-1" role="dialog" aria-labelledby="video1Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
-            <h4 class="modal-title"> Ultra CAT (03/2017) </h4>
-            <ul style="text-align:center;">
-              <li> Driver: Raven </li>
-              <li> Edited By: Anwar </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video1Label">Driver: Raven</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="" width="650" height="515" src="https://www.youtube.com/embed/zJcB2DMz-qQ" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
@@ -87,24 +80,28 @@
     </div>
   </div>
 
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-brick">
-          <img src="images/video2-cover.png" alt="2" />
-        </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-brick" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/video2-cover.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Canones Suletos (Brickell)</h5>
+        <p class="card-text">Street Race - Point A to B</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video2" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video2" tabindex="-1" role="dialog" aria-labelledby="video2Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-            <h4 class="modal-title">Canones Suletos (Brickell)</h4>
-            <ul style="text-align:center;">
-              <li> Driver: Kevin </li>
-              <li> Edited By: Kevin </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video2Label">Driver: Kevin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/4wF7xnGak48" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
@@ -113,26 +110,27 @@
   </div>
 
 
-
-
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-pizza">
-          <img src="images/video3-cover.png" alt="3" />
-        </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-pizza" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/video2-cover.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Pizza CAT</h5>
+        <p class="card-text">Orlando Race</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video3" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video3" tabindex="-1" role="dialog" aria-labelledby="video3Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-            <h4 class="modal-title">Pizza CAT</h4>
-            <ul style="text-align:center;">
-              <li> Driver: Kevin </li>
-              <li> Edited By: Kevin </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video3Label">Driver: Kevin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/7kpiGc7WzQA" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
@@ -142,26 +140,27 @@
 
 
 
-
-
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-max-deliveries">
-        <img src="images/max-deliveries.png" alt="3" />
-      </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-max-deliveries" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/max-deliveries.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Max Running Deliveries w/ Kyle</h5>
+        <p class="card-text">Deliveries</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video3" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video3" tabindex="-1" role="dialog" aria-labelledby="video3Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-            <h4 class="modal-title">Max Running Deliveries w/ Kyle</h4>
-            <ul style="text-align:center;">
-              <li> Driver: Max & Kyle </li>
-              <li> Edited By: Max </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video3Label">Driver: Max & Kyle</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/3do9BvDeBYw" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
@@ -170,26 +169,27 @@
   </div>
 
 
-
-
-  <div class="tile scale-anm mod-hd">
-    <a data-toggle="modal" href="#myModal-David-WynwoodCryt">
-    <img src="images/video5-cover.png" alt="5" />
-  </a>
-  </div>
-  <div class="bs-example2">
-    <div id="myModal-David-WynwoodCryt" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content2">
+  <div class="col-md-3">
+    <div class="card border-info" style="width: 21rem;">
+      <img class="card-img-top" src="images/max-deliveries.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">David @ Wynwood Cryt</h5>
+        <p class="card-text">Wynwood Cryt</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" data-target="#video5" data-toggle="modal" class="btn btn-primary">Video</button>
+      </div>
+    </div>
+    <!-- THE MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="video5" tabindex="-1" role="dialog" aria-labelledby="video5Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-top: 15px;">Close</button>
-            <h4 class="modal-title">David @ Wynwood Cryt</h4>
-            <ul style="text-align:center;">
-              <li> Driver: David </li>
-              <li> Edited By: Anwar </li>
-            </ul>
-          </div>
-          <div class="modal-body">
+            <h5 class="modal-title" id="video5Label">Driver: David</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button
+          <div class="modal-body" id="yt-player">
             <iframe id="" width="660" height="515" src="https://www.youtube.com/embed/-peZayJmQrg" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>

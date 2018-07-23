@@ -1,12 +1,10 @@
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/style.css">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 
@@ -24,13 +22,35 @@
 <h1 style="text-align:center;;margin-top:2em;"> Control Pannel </h1>
 
 
-<!-- <form action="http://localhost:3005/members" method="post" > -->
-<form action="/members"  method="POST" enctype="multipart/form-data">
-  <label for="first-name-input">First Name:</label>
-  <input id="first-name-input" type="text" name="username">
-  <input type="file" name="file">
-  <input type="submit" value="Upload Image" >
+
+
+</div>
+<header>
+  <h1 style="text-align:left;">Upload Photo</h1>
+  <span>ID: FixedLatino</span>
+</header>
+
+<form action="/members" method="POST" enctype="multipart/form-data">
+
+  <input type="text" name="" placeholder="Title"> <br><br>
+
+  <input type="file" name="file" multiple>
+  <fieldset class="active">
+  <select id="category">
+    <option value="all">All</option>
+    <option value="bikes">Bikes</option>
+    <option value="events">Events</option>
+    <option value="homies">Homies</option>
+  </select>
+  </fieldset>
+
+  <br>
+  <textarea id="textarea"></textarea> <br>
+  <button class="btn-success" type="submit" value="Upload Image">Submit</button
 </form>
+
+
+
 
 <!-- <div class="wrapper">
     <header>
@@ -88,9 +108,9 @@
         <li><span id="send">Send</span></li>
       </ul>
     </div>
-</div> -->
+</div>
 
-<div class="notification"></div>
+<div class="notification"></div> -->
 
 
 

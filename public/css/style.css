@@ -4,6 +4,35 @@ body {
   color: white;
 }
 
+/*--products headers starts here--*/
+.x-bg {
+overflow: hidden;
+/* position: absolute; */
+top: 0;
+left: 0;
+width: 100%;
+height: 16em;
+border-radius: inherit;
+pointer-events: none;
+speak: none;
+background-image: url("../images/bikes2.jpg");
+background-size: contain no-repeat;
+opacity: 0.8;
+}
+
+
+.x-txt {
+  font-family: cursive;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 30%;
+  margin-top: 2em;
+  padding-left: 1em;
+  border-left: 1px solid aqua;
+
+}
+
+
 /*navbar starts here*/
 nav{
     display: table;
@@ -52,7 +81,6 @@ nav ul li {
   width: 15em;
 	list-style-type: none;
 	text-align: center;
-  left: 13em;
 }
 
 ol li {
@@ -99,7 +127,7 @@ nav ul li:hover > ol {
 	display: block;
 }
 .navbar {
-  position: fixed !important;
+  /* position: fixed !important; */
   top: 0;
   left: 0;
   z-index: 9999;

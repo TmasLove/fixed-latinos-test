@@ -50,13 +50,9 @@ $('ul.first').bsPhotoGallery();
 
 
 
-
-<div class="container">
-  <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding-top:50px; margin-bottom:40px;">
-    <h3 style="font-family:'Bree Serif', arial; font-weight:bold; font-size:30px;">
-            <a style="text-decoration:none; color:#666; padding-top:60px;" href="">Photo Gallery</a>
-        </h3>
-  </div>
+<div class="x-bg">
+  <h1 class="x-txt"> Photo Gallery </h1>
+</div>
 
   <div class="toolbar">
     <button class="btn fil-cat" data-rel="all">All</button>
@@ -68,7 +64,7 @@ $('ul.first').bsPhotoGallery();
   <br>
 
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $(function() {
       var selectedClass = "";
       $(".fil-cat").click(function() {
@@ -81,99 +77,31 @@ $('ul.first').bsPhotoGallery();
         }, 300);
       });
     });
-  </script>
+  </script> -->
 
 
-  <ul class="row first">
-    <!-- all solo goes first -->
-    <li class="all">
-      <img alt="Sweet Background" src="images/bikes/birds.jpg">
-      <div class="text">All Bl4ck Everything</div>
-    </li>
-
-    <li class="all">
-      <img alt="Loving the Tape" src="images/bikes/oe.png">
-      <div class="text">Sexy cockpit view.</div>
-    </li>
 
 
-    <li class="all">
-      <img alt="Spaghetti bitch" src="http://demo.michaelsoriano.com/images/photodune-2441670-spaghetti-with-tuna-fish-and-parsley-s.jpg">
-      <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Budget this" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
-      <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Street art" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
-      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-    </li>
 
 
-    <li class="all">
-      <img alt="Insurance and stuff" src="http://demo.michaelsoriano.com/images/photodune-3552322-insurance-xs.jpg">
-      <div class="text">Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Food Explosion" src="http://demo.michaelsoriano.com/images/photodune-3807845-food-s.jpg">
-      <div class="text">Eiusmod tempor enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Office worker sad" src="http://demo.michaelsoriano.com/images/photodune-3835655-down-office-worker-xs.jpg">
-      <div class="text">Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="" src="http://demo.michaelsoriano.com/images/photodune-4619216-ui-control-knob-regulators-xs.jpg">
-      <div class="text">Do eiusmod tempor</div>
-    </li>
-
-    <li class="all">
-      <img alt="Health" src="http://demo.michaelsoriano.com/images/photodune-5771958-health-xs.jpg">
-      <div class="text">Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Constant consecutuir" src="http://demo.michaelsoriano.com/images/photodune-268693-businesswoman-using-laptop-outdoors-xs.jpg">
-      <!--no alt tag-->
-      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Search code" src="http://demo.michaelsoriano.com/images/photodune-352207-search-of-code-s.jpg">
-      <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-
-    <li class="all">
-      <img alt="Pountac" src="http://demo.michaelsoriano.com/images/photodune-247190-secret-email-xs.jpg">
-      <!--no alt tag, no text-->
-      <div class="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
-    </li>
-    <li class="all">
-      <img alt="Budget again" src="http://demo.michaelsoriano.com/images/photodune-2943363-budget-xs.jpg">
-      <div class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-    <li class="all">
-      <img alt="Some alt tag" src="http://demo.michaelsoriano.com/images/photodune-3444921-street-art-xs.jpg">
-      <!--no alt-->
-      <div class="text">Consectetur adipiscing elit, re magna aliqua. Ut enim ad minim veniam</div>
-    </li>
-    <li class="all">
-      <img alt="Sweet Miami Beach" src="images/bikes/mb.jpg">
-      <div class="text">Sexy MiamiBeach Picture</div>
-    </li>
-
-
+<div class="container-fluid">
+  <div class="row">
+    <% postsAndStuff.forEach((onePost) => { %>
+    <div class="column">
+      <img src="<%=onePost.image_path %>">
+    <div class="text">
+      <p> <%= onePost.username%> </p>
+      <p> <%= onePost.textarea%> </p>
+    </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
 
 
     <!-- bikes starts here -->
 
-    <li class="bikes all">
+    <!-- <li class="bikes all">
       <img alt="David's Bike" src="images/bikes/david.jpg">
       <div class="text">HeavyMetal's Cinelli</div>
     </li>
@@ -198,7 +126,7 @@ $('ul.first').bsPhotoGallery();
     <li class="bikes all">
       <img alt="Panda's Bike" src="images/bikes/panda-bike.png">
       <div class="text">Panda's sexy Aventon Team ride.</div>
-    </li>
+    </li> -->
 
 
     <!-- events starts here -->
@@ -209,7 +137,7 @@ $('ul.first').bsPhotoGallery();
 
 
     <!-- homies starts here -->
-    <li class="homies all">
+    <!-- <li class="homies all">
       <img alt="Insurance boy" src="http://demo.michaelsoriano.com/images/photodune-3552322-insurance-xs.jpg">
       <div class="text">Ut enim ad minim veniam</div>
     </li>
@@ -225,13 +153,13 @@ $('ul.first').bsPhotoGallery();
     <li class="homies all">
       <img alt="Anwar" src="images/bikes/war-bike.png">
       <div class="text">Anwar's Persuit</div>
-    </li>
+    </li> -->
 
 
-  </ul>
+  <!-- </ul> -->
 
 
-</div>
+
 <!-- /container -->
 
 

@@ -7,45 +7,60 @@
   <title>Fixed Latinos</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
 
 </head>
 
-<body>
-  <header>
 
-    <!-- navbar starts here -->
-     <nav>
-      <a class="navbar-brand" href="/">Fixed Latinos</a>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/squad">Squad</a></li>
-        <li><a href="/film">Film</a>
-          <ol>
-            <li class="pg"><a href="/photo-gallery">Gallery</a></li>
 
-          </ol>
-          <% if (typeof currentUser === 'object') { %>
-            <li><a href="/members">Members</a></li>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color:rgba(0,0,0,0.8);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-targer" aria-controls="collapse-targer" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <a class="navbar-brand" href="#">
+              <img src="" width="30" height="30" alt="">
+            </a>
+
+        <div class="collapse navbar-collapse" id="collapse-targer">
+
+          <ul class="navbar-nav cl-effect-1 ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/squad">Squad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/photo-gallery">Our Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/film">Film</a>
+            </li>
+
+            <% if (typeof currentUser === 'object') { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/members">Members</a>
+            </li>
             <%  } else { %>
-              <li><a href="/login">Login</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
               <%  } %>
-        </li>
-        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li> -->
-
-        <!-- <li><a href="/shop">Shop</a></li> -->
-      </ul>
-    </nav>
+          </ul>
+        </div>
+      </nav>
 
 
 
-
-
-  </header>
 
 
   <%- body %>
-</body>
+
 
 
 

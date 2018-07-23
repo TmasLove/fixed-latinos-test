@@ -94,9 +94,6 @@ app.get('/squad', (request, response, next) => {
   response.render('squad.ejs');
 });
 
-app.get('/photo-gallery', (request, response, next) => {
-  response.render('photo-gallery.ejs');
-});
 
 // app.get('/shop', (request, response, next) => {
 //   response.render('shop.ejs');
